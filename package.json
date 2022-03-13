@@ -1,9 +1,9 @@
 {
-  "name": "toni-pm",
+  "name": "tonipm.dev",
   "version": "1.0.0",
   "private": true,
-  "description": "toni-pm",
-  "author": "tonipm",
+  "description": "tonipm",
+  "author": "tonipm <toniperairam@gmail.com>",
   "keywords": [
     "gatsby"
   ],
@@ -12,18 +12,33 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "yarn eslint ."
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.9.2",
     "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-mdx": "^3.9.1",
     "gatsby-plugin-sharp": "^4.9.1",
+    "gatsby-plugin-styled-components": "^5.9.0",
     "gatsby-source-filesystem": "^4.9.1",
     "gatsby-transformer-sharp": "^4.9.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "standard": "^16.0.4",
+    "styled-components": "^5.3.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true
+    }
+  },
+  "devDependencies": {
+    "eslint-plugin-node": "^11.1.0",
+    "gatsby-plugin-root-import": "^2.0.8"
   }
 }
