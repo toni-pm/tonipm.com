@@ -1,25 +1,27 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import { navItems } from 'config'
+import { navItems, social } from 'config'
 import { Logo } from 'components'
+import { Icon } from 'components/icons'
 import styled from 'styled-components'
 
 const Navigation = styled.nav`
-  height: 10vh;
+  width: 10rem;
+  background-color: var(--nav-bg-color);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
   display: flex;
-  background-color: #fff;
-  position: relative;
-  justify-content: space-between;
+  flex-direction: column;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
-  margin: 0 auto;
-  padding: 0 5vw;
-  z-index: 2;
-  align-self: center;
+  padding-top: 25px;
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 8vh;
+    height: 6vh;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -27,20 +29,10 @@ const Navigation = styled.nav`
   }
 `
 
-const Toggle = styled.div`
-  display: none;
-  height: 100%;
-  cursor: pointer;
-  padding: 0 10vw;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`
-
 const Navbox = styled.div`
+  background-color: var(--nav-bg-color);
   display: flex;
-  height: 100%;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 
@@ -48,17 +40,32 @@ const Navbox = styled.div`
     flex-direction: column;
     position: fixed;
     width: 100%;
+    height: 100vh;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 0;
     left: ${props => (props.open ? '-100%' : '0')};
   }
 `
 
+const Toggle = styled.div`
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  display: none;
+  cursor: pointer;
+  margin: 0 10vw;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`
+
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: var(--primary);
   width: 30px;
   height: 3px;
   transition: all .3s linear;
@@ -70,7 +77,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: var(--primary);
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -78,7 +85,7 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-      props.open ? 'rotate(-90deg) translate(-10px, 0px)' : 'rotate(0deg)'};
+    props.open ? 'rotate(-90deg) translate(-10px, 0px)' : 'rotate(0deg)'};
     top: -10px;
   }
 
@@ -91,10 +98,11 @@ const Hamburger = styled.div`
 
 const NavItem = styled(Link)`
   text-decoration: none;
-  color: #111;
+  color: var(--nav-color);
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
+  padding: 15px 0;
   transition: all 200ms ease-in;
   position: relative;
 
@@ -106,33 +114,94 @@ const NavItem = styled(Link)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: goldenrod;
-    height: 1px;
-    transition: all 0.4s ease-in;
+    background: var(--nav-color-hover);
+    height: 2px;
+    transition: all 0.3s ease-in;
   }
 
   :hover {
-    color: goldenrod;
+    color: var(--nav-color-hover);
     ::after {
       width: 100%;
     }
   }
 
   @media (max-width: 768px) {
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 1.5rem;
     z-index: 6;
   }
 `
+
+const StyledSocial = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: var(--light-slate);
+  }
+
+  li {
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    a {
+      padding: 10px;
+
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+`;
+
+const NotDisplay768 = styled.div`
+  @media (max-width: 768px) {
+    * {
+      display: none;
+    }
+  }
+`
+
 const NavbarLinks = () => {
   return (
     <>
       {navItems &&
-                    navItems.map(({ url, name }, i) => (
-                      <NavItem key={i} to={url}>{name}</NavItem>
-                    ))}
-      <ol />
+        navItems.map(({ url, name }, i) => (
+          <NavItem key={i} to={url}>{name}</NavItem>
+        ))}
     </>
+  )
+}
+
+const SocialLinks = () => {
+  return (
+    <StyledSocial>
+      {social &&
+        social.map(({ url, name }, i) => (
+          <li key={i}>
+            <a href={url} target='_blank'>
+              <Icon name={name} />
+            </a>
+          </li>
+        ))}
+    </StyledSocial>
   )
 }
 
@@ -141,24 +210,39 @@ const Nav = ({ isHome }) => {
 
   return (
     <Navigation>
-      <Logo />
+      {navbarOpen
+        ? (
+          <Navbox>
+            <Link to="/">
+              <Logo />
+            </Link>
+            <NavbarLinks />
+            <SocialLinks />
+          </Navbox>
+        )
+        : (
+          <>
+            <Link to="/">
+              <NotDisplay768>
+                <Logo />
+              </NotDisplay768>
+            </Link>
+            <Navbox open>
+              <NavbarLinks />
+              <SocialLinks />
+            </Navbox>
+          </>
+        )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        {navbarOpen ?
+          <Hamburger open />
+          :
+          <Hamburger />
+        }
       </Toggle>
-      {navbarOpen
-        ? (
-          <Navbox>
-            <NavbarLinks />
-          </Navbox>
-          )
-        : (
-          <Navbox open>
-            <NavbarLinks />
-          </Navbox>
-          )}
     </Navigation>
   )
 }

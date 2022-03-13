@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <StaticImage
       src='../images/icon.png'
-      width={50}
+      height={300}
       alt='logo Toni tonipm'
     />
   )

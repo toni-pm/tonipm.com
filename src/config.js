@@ -26,6 +26,10 @@ module.exports = {
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com'
+    },
+    {
+      name: 'HackTheBox',
+      url: 'https://app.hackthebox.com/profile/903797'
     }
   ],
   skills: ['HTML', 'CSS', 'JavaScript (ES6+)', 'Java', 'Knockout', 'React', 'Node.js', 'Express', 'Python'],

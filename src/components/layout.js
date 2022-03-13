@@ -1,13 +1,23 @@
 import * as React from 'react'
+import styled from 'styled-components'
+
+const StyledLayout = styled.div`
+  min-height: 100vh;
+  padding: 3rem 3rem 3rem 13rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
+`
+
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div>
-      <title>{pageTitle}</title>
+    <StyledLayout>
       <main>
-        <h1>{pageTitle}</h1>
+        {pageTitle && (<h1>{pageTitle}</h1>)}
         {children}
       </main>
-    </div>
+    </StyledLayout>
   )
 }
 export default Layout
