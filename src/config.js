@@ -32,7 +32,52 @@ module.exports = {
       url: 'https://app.hackthebox.com/profile/903797'
     }
   ],
-  skills: ['HTML', 'CSS', 'JavaScript (ES6+)', 'Java', 'Knockout', 'React', 'Node.js', 'Express', 'Python'],
+  skills: [
+    {
+      name: 'HTML',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'CSS',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'JavaScript',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'Java',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'Knockout',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'React',
+      level: 100
+    },
+    {
+      name: 'Node.js',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'Express',
+      level: 100,
+      image: 'bootstrap.svg'
+    },
+    {
+      name: 'Python',
+      level: 100,
+      image: 'bootstrap.svg'
+    }
+  ],
   colors: {
     green: '#64ffda',
     navy: '#0a192f',

@@ -1,10 +1,62 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { skills } from 'config'
+import TagCloud from 'TagCloud'
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Skills = () => {
+
+  const container = '.tagcloud';
+  const map = new Map(skills.map(item => ([
+    item.name,
+    item
+  ])))
+  console.log(skills)
+  const texts = skills.map(skill => skill.name);
+  const options = {
+    maxSpeed: 'slow'
+  };
+
+  useEffect(() => {
+    TagCloud(container, texts, options);
+    //setTimeout(() => {
+    console.log('test')
+    //setInterval(() => {
+    /*let items = document.querySelectorAll('.tagcloud--item')
+    console.log(items)
+    items.forEach(item => {
+      let name = item.innerHTML
+      item.setAttribute('data-name', name)
+      item.innerHTML = '<img src=\'../../images/nodejs.svg\' />'
+      item.innerHTML = ``
+      console.log(map.get(name))
+      //item.append('hola')
+    })*/
+    //}, 1000)
+    //}, 1000)
+  }, []);
+
   return (
     <div id='skills'>
       <h2>Skills</h2>
+      {
+        skills && skills.map(skill =>
+        (
+          <div>
+            {skill.name}
+
+            <StaticImage
+              className="img"
+              src={`../../images/skills/${skill.image}`}
+              width={50}
+              quality={95}
+              alt="Headshot"
+            />
+          </div>
+        )
+        )
+      }
+
+      <div className='tagcloud'></div>
 
       <div className='inner'>
         <div>
@@ -17,7 +69,7 @@ const Skills = () => {
         </div>
 
         <ul>
-          {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          {skills && skills.map((skill, i) => <li key={i}>{skill.name}</li>)}
         </ul>
       </div>
     </div>
