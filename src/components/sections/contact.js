@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 
 const Form = styled.form`
@@ -36,27 +37,28 @@ const Form = styled.form`
 
 const Contact = () => {
   return (
-    <div id='contact'>
-      <h2>Contact</h2>
+    <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+      <section id='contact'>
+        <h2>Contact</h2>
 
-      <div className='inner'>
-        <Form>
-          <label for="lname">Name</label>
-          <input type="text" id="lname" name="name" placeholder="Name" />
+        <div className='inner'>
+          <Form>
+            <label for="lname">Name</label>
+            <input type="text" id="lname" name="name" placeholder="Name" />
 
-          <label for="lname">Mail</label>
-          <input type="mail" id="lemail" name="email" placeholder="Email" />
+            <label for="lname">Mail</label>
+            <input type="mail" id="lemail" name="email" placeholder="Email" />
 
-          <label for="lsubject">Subject</label>
-          <input type="text" id="lsubject" name="subject" placeholder="Subject" />
+            <label for="lsubject">Subject</label>
+            <input type="text" id="lsubject" name="subject" placeholder="Subject" />
 
-          <label for="txtmessage">Message</label>
-          <textarea id="txtmessage" name="message" placeholder="Message"></textarea>
+            <label for="txtmessage">Message</label>
+            <textarea id="txtmessage" name="message" placeholder="Message"></textarea>
 
-          <input type="submit" value="Send message!" />
-        </Form>
-      </div>
-    </div>
+            <input type="submit" value="Send message!" />
+          </Form>
+        </div></section>
+    </Fade>
   )
 }
 

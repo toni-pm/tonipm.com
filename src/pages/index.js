@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { GlobalStyle } from 'styles';
-import { Layout, Nav, About, Contact, Experience, Skills, Main } from 'components'
+import { Layout, Nav, About, Contact, Experience, Skills, Hero } from 'components'
 
 const IndexPage = () => {
   return (
@@ -11,7 +11,7 @@ const IndexPage = () => {
 
         <Nav />
         <Layout>
-          <Main />
+          <Hero />
           <About />
           <Skills />
           <Experience />

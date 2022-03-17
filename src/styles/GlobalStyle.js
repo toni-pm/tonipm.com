@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import TransitionStyles from './TransitionStyles';
 import variables from './variables';
 
 const GlobalStyle = createGlobalStyle`
@@ -17,6 +18,13 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-color);
     line-height: var(--line-height);
     font-family: var(--font-family)
+
+    * {
+      filter: blur(5px) brightness(0.7);
+      transition: var(--transition);
+      pointer-events: none;
+      user-select: none;
+    }
   }
   
   svg {
@@ -34,6 +42,8 @@ const GlobalStyle = createGlobalStyle`
       stroke: var(--nav-color-hover)
     }
   }
+
+  ${TransitionStyles};
 `;
 
 export default GlobalStyle;
