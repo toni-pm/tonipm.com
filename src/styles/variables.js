@@ -7,6 +7,7 @@ const variables = css`
     --bg-color: #222222;
     --text-color: #fff;
     --nav-bg-color: #181818;
+    --nav-bg-color-mobile: #181818ee;
     --nav-color: #ccc;
     --nav-color-hover: var(--primary);
     --line-height: 1.3;

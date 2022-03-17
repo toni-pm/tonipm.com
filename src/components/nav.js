@@ -14,11 +14,14 @@ const Navigation = styled.nav`
   top: 0;
   right: auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
   padding-top: 25px;
+  z-index: 1;
 
   @media (max-width: 768px) {
+    background-color: var(--nav-bg-color-mobile);
     position: sticky;
     height: 6vh;
     width: 100%;
@@ -169,7 +172,7 @@ const StyledSocial = styled.ul`
       }
     }
   }
-`;
+`
 
 const NotDisplay768 = styled.div`
   @media (max-width: 768px) {
@@ -196,7 +199,7 @@ const SocialLinks = () => {
       {social &&
         social.map(({ url, name }, i) => (
           <li key={i}>
-            <a href={url} target='_blank'>
+            <a href={url} target='_blank' rel='noreferrer'>
               <Icon name={name} />
             </a>
           </li>
@@ -213,16 +216,16 @@ const Nav = ({ isHome }) => {
       {navbarOpen
         ? (
           <Navbox>
-            <Link to="/">
+            <Link to='/'>
               <Logo />
             </Link>
             <NavbarLinks />
             <SocialLinks />
           </Navbox>
-        )
+          )
         : (
           <>
-            <Link to="/">
+            <Link to='/'>
               <NotDisplay768>
                 <Logo />
               </NotDisplay768>
@@ -232,16 +235,14 @@ const Nav = ({ isHome }) => {
               <SocialLinks />
             </Navbox>
           </>
-        )}
+          )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
-        {navbarOpen ?
-          <Hamburger open />
-          :
-          <Hamburger />
-        }
+        {navbarOpen
+          ? <Hamburger open />
+          : <Hamburger />}
       </Toggle>
     </Navigation>
   )
