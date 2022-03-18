@@ -14,7 +14,8 @@ const Navigation = styled.nav`
   top: 0;
   right: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   text-transform: uppercase;
   padding-top: 25px;
@@ -29,6 +30,7 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
+    padding: 10px;
   }
 `
 
@@ -44,8 +46,7 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     height: 100vh;
-    justify-content: flex-start;
-    padding-top: 10vh;
+    justify-content: space-between;
     transition: all 0.3s ease-in;
     top: 0;
     left: ${props => (props.open ? '-100%' : '0')};
@@ -59,7 +60,7 @@ const Toggle = styled.div`
   width: 30px;
   display: none;
   cursor: pointer;
-  margin: 0 10vw;
+  margin: 10px 10vw;
   z-index: 1;
 
   @media (max-width: 768px) {
@@ -136,13 +137,28 @@ const NavItem = styled(Link)`
   }
 `
 
+const StyledLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  & .logo {    
+    display: ${props => (props.open ? 'flex' : 'none')};
+  }
+`
+
 const StyledSocial = styled.ul`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 30px;
+  flex - direction: row;
+  align - items: flex - start;
+  margin - top: 30px;
   padding: 0;
-  list-style: none;
+  list - style: none;
+
+  @media(max-width: 768px) {
+    display: ${props => (props.open ? 'flex' : 'none')};
+  }
 
   &:after {
     content: '';
@@ -150,10 +166,12 @@ const StyledSocial = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--light-slate);
+    background - color: var(--light - slate);
   }
 
   li {
+    list-style: none;
+
     &:last-of-type {
       margin-bottom: 20px;
     }
@@ -161,7 +179,7 @@ const StyledSocial = styled.ul`
     a {
       padding: 10px;
 
-      &:hover,
+      &: hover,
       &:focus {
         transform: translateY(-3px);
       }
@@ -175,27 +193,34 @@ const StyledSocial = styled.ul`
 `
 
 const NotDisplay768 = styled.div`
-  @media (max-width: 768px) {
-    * {
-      display: none;
-    }
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 50px;
   }
 `
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ open }) => {
   return (
-    <>
-      {navItems &&
+    <StyledLinks open={open}>
+      <Link to='/' style={{ "margin-bottom": "20px" }}>
+        <Logo />
+      </Link>
+      {
+        navItems &&
         navItems.map(({ url, name }, i) => (
           <NavItem key={i} to={url}>{name}</NavItem>
-        ))}
-    </>
+        ))
+      }
+    </StyledLinks >
   )
 }
 
-const SocialLinks = () => {
+const SocialLinks = ({ open }) => {
   return (
-    <StyledSocial>
+    <StyledSocial open={open}>
       {social &&
         social.map(({ url, name }, i) => (
           <li key={i}>
@@ -216,13 +241,11 @@ const Nav = ({ isHome }) => {
       {navbarOpen
         ? (
           <Navbox>
-            <Link to='/'>
-              <Logo />
-            </Link>
-            <NavbarLinks />
-            <SocialLinks />
+            <div></div>
+            <NavbarLinks open={true} />
+            <SocialLinks open={true} />
           </Navbox>
-          )
+        )
         : (
           <>
             <Link to='/'>
@@ -231,11 +254,11 @@ const Nav = ({ isHome }) => {
               </NotDisplay768>
             </Link>
             <Navbox open>
-              <NavbarLinks />
-              <SocialLinks />
+              <NavbarLinks open={navbarOpen} />
             </Navbox>
+            <SocialLinks open={navbarOpen} />
           </>
-          )}
+        )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --green: #9fef00;
-    --primary: var(--green);
-    --bg-color: #222222;
-    --text-color: #fff;
-    --nav-bg-color: #181818;
+    --primary: #9fef00;
+    --bg-color: #20202d;
+    --title-color: #f0f0f4;
+    --text-color: #c3c3d5;
+    --nav-bg-color: #181822;
     --nav-bg-color-mobile: #181818ee;
     --nav-color: #ccc;
     --nav-color-hover: var(--primary);

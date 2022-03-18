@@ -6,6 +6,13 @@ export const hex2rgba = (hex, alpha = 1) => {
 export const navDelay = 1000;
 export const loaderDelay = 1000;
 
+
+
+//amongus
+//backgroundmask
+//collisions
+//nasa
+
 export const KEY_CODES = {
     ARROW_LEFT: 'ArrowLeft',
     ARROW_LEFT_IE11: 'Left',
