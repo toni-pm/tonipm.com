@@ -43,14 +43,33 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1 {
-    margin: 0px 0px 30px 0px;
-    color: var(--primary);
-    font-weight: normal;
-  }
-
   h2 {
     color: var(--title-color);
+  }
+
+  h1, h2, h3 {
+    margin: 5px 0;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0 0 0 5vw;
+  }
+
+  p {
+    max-width: 700px;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 0;
+      margin-bottom: 100px;
+    }
   }
 
   ${TransitionStyles};

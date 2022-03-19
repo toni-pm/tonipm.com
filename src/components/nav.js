@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby'
 import { navItems, social } from 'config'
+import { KEY_CODES } from '../utils';
 import { Logo } from 'components'
 import { Icon } from 'components/icons'
 import styled from 'styled-components'
@@ -24,6 +25,8 @@ const Navigation = styled.nav`
   @media (max-width: 768px) {
     background-color: var(--nav-bg-color-mobile);
     position: sticky;
+    justify-content: center;
+    align-items: flex-start;
     height: 6vh;
     width: 100%;
     top: 0;
@@ -60,7 +63,7 @@ const Toggle = styled.div`
   width: 30px;
   display: none;
   cursor: pointer;
-  margin: 10px 10vw;
+  margin: 10px 20vw;
   z-index: 1;
 
   @media (max-width: 768px) {
@@ -235,6 +238,33 @@ const SocialLinks = ({ open }) => {
 
 const Nav = ({ isHome }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+
+
+  const onKeyDown = e => {
+    switch (e.key) {
+      case KEY_CODES.ESCAPE:
+        setNavbarOpen(false);
+        break;
+      default:
+        return;
+    }
+  };
+
+  const onResize = e => {
+    if (e.currentTarget.innerWidth > 768) {
+      setNavbarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', onKeyDown);
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
 
   return (
     <Navigation>

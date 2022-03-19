@@ -10,7 +10,7 @@ const variables = css`
     --nav-bg-color-mobile: #181818ee;
     --nav-color: #ccc;
     --nav-color-hover: var(--primary);
-    --line-height: 1.3;
+    --line-height: 1.5;
     --font-family: -apple-system, Roboto, sans-serif, serif;
 
     

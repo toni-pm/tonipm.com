@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const StyledLayout = styled.div`
   min-height: 100vh;
-  padding: 3rem 3rem 0rem 13rem;
+  padding: 0rem 3rem 0rem 13rem;
 
   @media (max-width: 768px) {
-    padding: 3rem;
+    padding: 0 3rem 3rem 3rem;
   }
 `
 

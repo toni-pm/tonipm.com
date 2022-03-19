@@ -33,7 +33,7 @@ const LogoCSS = styled.div`
   span {
     position: absolute;
     font-size: 2rem;
-    top: 6px;
+    top: 3px;
     left: 15px;
     color: #9fef00;
   }
