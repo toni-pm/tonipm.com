@@ -122,13 +122,14 @@ module.exports = {
         'ACCÉS A DADES',
         'DISSENY D\'INTERFÍCIES MULTIPLATAFORMA',
         'PROGRAMACIÓ MULTIMÈDIA I DISP. MÒBILS',
-        'PROGRAMACIÓ DE SERVEIS I PROCESSOS',
+        'PROGRAMACIÓ DE SERVEIS I PROCESSOS', ,
+        'Game development',
         'ERP',
       ]
     },
     {
       name: 'Cybersecurity specialization course',
-      year: 2022,
+      year: 2021,
       active: true,
       location: 'Institut Montilivi',
       topics: [
@@ -139,7 +140,54 @@ module.exports = {
         'HÀCKING ÈTIC',
         'NORMATIVA DE CIBERSEGURETAT',
       ]
+    }
+  ],
+  experience: [
+    {
+      company: 'Meca Centre S.L.',
+      job: 'Senior Technician in Systems Administration',
+      start: 'June 2014',
+      end: 'October 2014',
+      functions: [
+        'Systems administration and installation.',
+        'Web development.',
+        'Hardware repair.'
+      ]
     },
+    {
+      company: 'Hibiscus Town S.L.',
+      job: 'Parking controller',
+      start: 'June 2014',
+      end: 'October 2014',
+      functions: [
+        'Controller of parking and blue zone of the town of Begur.'
+      ]
+    },
+    {
+      company: 'DSET SOLUTIONS',
+      job: 'Programmer analyst & Project manager',
+      start: 'April 2016',
+      active: true,
+      functions: [
+        'Responsible for software projects.',
+        'Analysis, planning, creation and management of projects and work groups.',
+        'Design of business solutions at the software level.',
+        'Management of the architecture of physical and cloud servers (AWS).',
+        'Creation of websites and mobile Apps.'
+      ]
+    },
+    {
+      company: 'Freelancer',
+      job: 'Web Designer & Webmaster',
+      start: '2018',
+      active: true,
+      functions: [
+        'Creation of web pages and Webmaster of own sites.',
+        `+50 web pages created for public entities or small companies at provincial level
+        using content managers such as Wordpress, Joomla or handmade (code) for
+        specific needs.`
+      ]
+    }
   ],
   colors: {
     green: '#64ffda',
