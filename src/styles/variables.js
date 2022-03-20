@@ -3,7 +3,9 @@ import { css } from 'styled-components';
 const variables = css`
   :root {
     --primary: #9fef00;
+    --secondary: #334d00;
     --bg-color: #20202d;
+    --bg-color-hover: #35354b;
     --title-color: #f0f0f4;
     --text-color: #c3c3d5;
     --nav-bg-color: #181822;

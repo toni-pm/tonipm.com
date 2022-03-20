@@ -6,19 +6,19 @@ import Fade from 'react-reveal/Fade'
 
 const Skills = () => {
 
-  /*const container = '.tagcloud';
-  const map = new Map(skills.map(item => ([
+  const container = '.tagcloud';
+  /*const map = new Map(skills.map(item => ([
     item.name,
     item
   ])))
-  console.log(skills)
+  console.log(skills)*/
   const texts = skills.map(skill => skill.name);
   const options = {
     maxSpeed: 'slow'
-  };*/
+  };
 
   useEffect(() => {
-    //TagCloud(container, texts, options);
+    TagCloud(container, texts, options);
     //setTimeout(() => {
     //console.log('test')
     //setInterval(() => {

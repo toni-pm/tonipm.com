@@ -82,6 +82,65 @@ module.exports = {
       image: 'bootstrap.svg'
     }
   ],
+  education: [
+    {
+      name: 'Technological GCE',
+      year: 2012,
+      location: 'IES Frederic Martí Carreras'
+    },
+    {
+      name: 'Superior Technician in Network IT systems administrator',
+      year: 2014,
+      location: 'Institut Montilivi',
+      topics: [
+        'FONAMENTS DE hardware',
+        'ADMINISTRACIÓ DE SO',
+        'PLANIFICACIÓ I ADMINISTRACIÓ DE XARXES',
+        'SERVEIS DE XARXA I INTERNET',
+        'ADMINISTRACIÓ DE SGBD',
+        'SEGURETAT I ALTA DISPONIBILITAT'
+      ]
+    },
+    {
+      name: 'Superior Technician in Web applications development',
+      year: 2016,
+      location: 'Institut Montilivi',
+      topics: [
+        'ENTORNS DE DESENVOLUPAMENT',
+        'DESENVOLUPAMENT WEB EN ENTORN CLIENT',
+        'DESENVOLUPAMENT WEB EN ENTORN SERVIDOR',
+        'DESPLEGAMENT D\'APLICACIONS WEB',
+        'DISSENY D\'INTERFICIES WEB'
+      ]
+    },
+    {
+      name: 'Superior Technician in Multiplatform applications development',
+      year: 2017,
+      location: 'Institut Montilivi',
+      topics: [
+        'ENTORNS DE DESENVOLUPAMENT',
+        'ACCÉS A DADES',
+        'DISSENY D\'INTERFÍCIES MULTIPLATAFORMA',
+        'PROGRAMACIÓ MULTIMÈDIA I DISP. MÒBILS',
+        'PROGRAMACIÓ DE SERVEIS I PROCESSOS',
+        'ERP',
+      ]
+    },
+    {
+      name: 'Cybersecurity specialization course',
+      year: 2022,
+      active: true,
+      location: 'Institut Montilivi',
+      topics: [
+        'Incidents de ciberseguretat',
+        'ENFORTIMENT DE XARXES I SISTEMES',
+        'POSADA EN PRODUCCIÓ SEGURA',
+        'ANÀLISI FORENSE INFORMÀTIC',
+        'HÀCKING ÈTIC',
+        'NORMATIVA DE CIBERSEGURETAT',
+      ]
+    },
+  ],
   colors: {
     green: '#64ffda',
     navy: '#0a192f',

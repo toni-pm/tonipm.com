@@ -72,6 +72,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .inner {
+    width: 100%;
+  }
+
   ${TransitionStyles};
 `;
 
