@@ -24,7 +24,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        Actualmente analista programador y jefe de proyecto, especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.
+        Actualmente soy analista programador y jefe de proyecto. Estoy especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.
       </p>
     </>
   );

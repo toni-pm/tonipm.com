@@ -21,6 +21,8 @@ const Navigation = styled.nav`
   text-transform: uppercase;
   padding-top: 25px;
   z-index: 1;
+  -webkit-box-shadow: 6px 4px 14px 5px var(--shadow); 
+  box-shadow: 6px 4px 14px 5px var(--shadow);
 
   @media (max-width: 768px) {
     background-color: var(--nav-bg-color-mobile);
