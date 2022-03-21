@@ -75,6 +75,19 @@ const GlobalStyle = createGlobalStyle`
   .inner {
     width: 100%;
   }
+
+  .skills {
+    width: 100%;
+    background-color: #ddd;
+  }
+
+  .skills-inner {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: #04AA6D;
+  }
   
   .react-tabs {
     display: flex;

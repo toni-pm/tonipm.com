@@ -20,11 +20,11 @@ const Hero = () => {
 
   const one = <h1>Hi, I'm Toni</h1>;
   const two = <h2>Software & Web Developer</h2>;
-  const three = <h3>System Administrator</h3>;
+  const three = <h3>Cybersecurity Specialist</h3>;
   const four = (
     <>
       <p>
-        Nullam tincidunt posuere libero. In bibendum est eu lacus elementum feugiat. Phasellus lacus tellus, pretium ac tellus vitae, sollicitudin tincidunt lectus. Donec iaculis molestie tellus et semper. Cras et nibh ultricies, vehicula mauris non, interdum enim. Vivamus gravida diam in tellus mattis imperdiet. Nunc vel ipsum augue. In a ornare eros. Nullam malesuada lacinia erat nec scelerisque. Praesent non urna vel ex dignissim dapibus. Vestibulum pharetra porta ante et bibendum. In nec mollis leo.
+        Actualmente analista programador y jefe de proyecto, especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.
       </p>
     </>
   );

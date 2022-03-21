@@ -38,48 +38,112 @@ module.exports = {
   ],
   skills: [
     {
+      name: 'Windows',
+      level: 70
+    },
+    {
+      name: 'Linux',
+      level: 90
+    },
+    {
+      name: 'Docker',
+      level: 85
+    },
+    {
+      name: 'Bash',
+      level: 90
+    },
+    {
       name: 'HTML',
-      level: 100,
-      image: 'bootstrap.svg'
-    },
-    {
-      name: 'CSS',
-      level: 100,
-      image: 'bootstrap.svg'
-    },
-    {
-      name: 'JavaScript',
-      level: 100,
-      image: 'bootstrap.svg'
-    },
-    {
-      name: 'Java',
-      level: 100,
-      image: 'bootstrap.svg'
-    },
-    {
-      name: 'Knockout',
-      level: 100,
-      image: 'bootstrap.svg'
-    },
-    {
-      name: 'React',
       level: 100
     },
     {
-      name: 'Node.js',
-      level: 100,
-      image: 'bootstrap.svg'
+      name: 'CSS',
+      level: 90
     },
     {
-      name: 'Express',
-      level: 100,
-      image: 'bootstrap.svg'
+      name: 'JavaScript',
+      level: 90
+    },
+    {
+      name: 'Java',
+      level: 90
+    },
+    {
+      name: 'Knockout.js',
+      level: 100
+    },
+    {
+      name: 'React.js',
+      level: 85
+    },
+    {
+      name: 'Node.js & Express',
+      level: 100
+    },
+    {
+      name: 'Bootstrap',
+      level: 100
     },
     {
       name: 'Python',
-      level: 100,
-      image: 'bootstrap.svg'
+      level: 70
+    },
+    {
+      name: 'C#',
+      level: 40
+    },
+    {
+      name: 'Angular',
+      level: 60
+    },
+    {
+      name: 'Vue.js',
+      level: 70
+    },
+    {
+      name: 'PHP',
+      level: 70
+    },
+    {
+      name: 'PostgreSQL',
+      level: 100
+    },
+    {
+      name: 'MySQL & MariaDB',
+      level: 100
+    },
+    {
+      name: 'Oracle SQL',
+      level: 50
+    },
+    {
+      name: 'SQL Server',
+      level: 50
+    },
+    {
+      name: 'MongoDB',
+      level: 70
+    },
+    {
+      name: 'Wordpress/Joomla',
+      level: 100
+    },
+    {
+      name: 'RabbitMQ',
+      level: 80
+    },
+    {
+      name: 'Cordova/Phonegap/Ionic',
+      level: 80
+    },
+    {
+      name: 'Git',
+      level: 80
+    },
+    {
+      name: 'AWS',
+      level: 70
     }
   ],
   education: [
