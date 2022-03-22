@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 
@@ -18,13 +19,13 @@ const StyledHero = styled.div`
 
 const Hero = () => {
 
-  const one = <h1>Hi, I'm Toni</h1>;
-  const two = <h2>Software & Web Developer</h2>;
-  const three = <h3>Cybersecurity Specialist</h3>;
+  const one = <h1><Trans>hero_title</Trans></h1>;
+  const two = <h2><Trans>hero_subtitle1</Trans></h2>;
+  const three = <h3><Trans>hero_subtitle2</Trans></h3>;
   const four = (
     <>
       <p>
-        Actualmente soy analista programador y jefe de proyecto. Estoy especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.
+        <Trans>hero_content</Trans>
       </p>
     </>
   );

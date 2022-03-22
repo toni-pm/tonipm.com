@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'gatsby'
+import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { navItems, social } from 'config'
 import { KEY_CODES } from '../utils';
 import { Logo } from 'components'
@@ -208,6 +208,7 @@ const NotDisplay768 = styled.div`
 `
 
 const NavbarLinks = ({ open }) => {
+  const { languages, originalPath } = useI18next();
   return (
     <StyledLinks open={open}>
       <Link to='/' style={{ "margin-bottom": "20px" }}>
@@ -219,6 +220,15 @@ const NavbarLinks = ({ open }) => {
           <NavItem key={i} to={url}>{name}</NavItem>
         ))
       }
+      <ul className="languages">
+        {languages.map((lng) => (
+          <li key={lng}>
+            <Link to={originalPath} language={lng}>
+              {lng}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </StyledLinks >
   )
 }

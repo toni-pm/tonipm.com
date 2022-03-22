@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GlobalStyle } from 'styles';
 import { Layout, Nav, About, Contact, Education, Experience, Skills, Hero, Footer } from 'components'
 
 const IndexPage = () => {
+
+  const { t } = useTranslation();
+
   return (
     <>
       <GlobalStyle />
@@ -25,3 +30,17 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
