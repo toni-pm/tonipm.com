@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import { Trans } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components'
 
 const Form = styled.form`
@@ -39,7 +40,7 @@ const Contact = () => {
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
       <section id='contact'>
-        <h2>Contact</h2>
+        <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
           <Form>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { skills } from 'config'
 import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
@@ -24,12 +25,12 @@ const Skills = () => {
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
       <section id='skills'>
-        <h2>Skills</h2>
+        <h2><Trans>Skills</Trans></h2>
         <div className='tagcloud'></div>
 
         <div className='inner'>
           <p>
-            My most interesting skills:
+            <Trans>skills_content</Trans>
           </p>
           <ul>
             {skills && skills.map((skill, i) =>

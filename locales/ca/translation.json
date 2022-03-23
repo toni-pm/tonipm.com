@@ -1,6 +1,19 @@
 {
+    "About": "Sobre mi",
+    "Skills": "Habilitats",
+    "Education": "Estudis",
+    "Experience": "Experiència",
+    "Contact": "Contacte",
+    "About Me": "Sobre mi",
     "hero_title": "Hola, sóc Toni",
     "hero_subtitle1": "Desenvolupador de software y web",
     "hero_subtitle2": "Especialista en Ciberseguretat",
-    "hero_content": "Actualment sóc analista programador i cap de projecte. Estic especialitzant-me en ciberseguretat per entendre els perills informàtics que deixem després de la nostra feina, que evolucionen alhora que el desenvolupament."
+    "hero_content": "Actualment sóc analista programador i cap de projecte. Estic especialitzant-me en ciberseguretat per entendre els perills informàtics que deixem després de la nostra feina, que evolucionen alhora que el desenvolupament.",
+    "about_me": "<p>Hola el meu nom és Toni! Sóc un desenvolupador Full-Stack apassionat per aprendre coses noves. M'encanta aprendre noves tecnologies i estar al dia de les novetats del món del desenvolupament.</p><p>Una de les coses que més m'agraden de la programació és que em permet trobar solucions per a tot, per això sóc un gran fan de l'scripting. Si he de fer qualsevol cosa, segur que es pot automatitzar amb un script.</p><p>En constant aprenentatge i amb la música sempre posada, avui estic especialitzant-me en ciberseguretat, encara que les hores se'm passen molt més ràpid al Frontend.</p><p>Algun dia m'agradaria arribar a ser tot un mestre de JavaScript, però com que canvia cada any és difícil seguir el ritme 😂</p><p>Sempre preparat per a nous reptes.< /p>",
+    "skills_content": "Les meves habilitats més interessants:",
+    "Bachillerato Tecnológico": "Technological GCE",
+    "ASIX": "Superior Technician in Network IT systems administrator",
+    "DAW": "Superior Technician in Web applications development",
+    "DAM": "Superior Technician in Multiplatform applications development",
+    "Curso especialización Ciberseguridad": "Cybersecurity specialization course"
 }

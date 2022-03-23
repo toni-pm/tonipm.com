@@ -148,12 +148,12 @@ module.exports = {
   ],
   education: [
     {
-      name: 'Technological GCE',
+      name: 'Bachillerato Tecnológico',
       year: 2012,
       location: 'IES Frederic Martí Carreras'
     },
     {
-      name: 'Superior Technician in Network IT systems administrator',
+      name: 'ASIX',
       year: 2014,
       location: 'Institut Montilivi',
       topics: [
@@ -166,7 +166,7 @@ module.exports = {
       ]
     },
     {
-      name: 'Superior Technician in Web applications development',
+      name: 'DAW',
       year: 2016,
       location: 'Institut Montilivi',
       topics: [
@@ -178,7 +178,7 @@ module.exports = {
       ]
     },
     {
-      name: 'Superior Technician in Multiplatform applications development',
+      name: 'DAM',
       year: 2017,
       location: 'Institut Montilivi',
       topics: [
@@ -192,7 +192,7 @@ module.exports = {
       ]
     },
     {
-      name: 'Cybersecurity specialization course',
+      name: 'Curso especialización Ciberseguridad',
       year: 2021,
       active: true,
       location: 'Institut Montilivi',

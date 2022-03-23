@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { experience } from 'config'
 import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -9,7 +10,7 @@ const Experience = () => {
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
       <section id='experience'>
-        <h2>Experience</h2>
+        <h2><Trans>Experience</Trans></h2>
 
         <div className='inner'>
           <div>

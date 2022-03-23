@@ -1,6 +1,19 @@
 {
+    "About": "About",
+    "Skills": "Skills",
+    "Education": "Education",
+    "Experience": "Experience",
+    "Contact": "Contact",
+    "About Me": "About me",
     "hero_title": "Hi, I'm Toni",
     "hero_subtitle1": "Software & Web Developer",
     "hero_subtitle2": "Cybersecurity Specialist",
-    "hero_content": "I am currently a programmer analyst and project manager. I am specializing in cybersecurity to understand the cyber dangers that we leave behind our work, which evolve along with development."
+    "hero_content": "I am currently a programmer analyst and project manager. I am specializing in cybersecurity to understand the cyber dangers that we leave behind our work, which evolve along with development.",
+    "about_me": "<p>Hello my name is Toni! I am a full-stack developer passionate about learning new things. I love learning new technologies and keeping up with what's new in the development world.</p><p>One of the things I like the most about programming is that it allows me to find solutions for everything, that's why I'm a big fan of the scripting. If I have to do anything, I'm sure it can be automated with a script.</p><p>In constant learning and with music always on, today I am specializing in cybersecurity, although the hours go by much more fast in the Frontend.</p><p>One day I would like to become a master of JavaScript, but as it changes every year it is difficult to keep up 😂</p><p>Always ready for new challenges.< /p>",
+    "skills_content": "My most interesting skills:",
+    "Bachillerato Tecnológico": "Technological GCE",
+    "ASIX": "Superior Technician in Network IT systems administrator",
+    "DAW": "Superior Technician in Web applications development",
+    "DAM": "Superior Technician in Multiplatform applications development",
+    "Curso especialización Ciberseguridad": "Cybersecurity specialization course"
 }

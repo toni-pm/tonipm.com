@@ -1,6 +1,19 @@
 {
+    "About": "Sobre mí",
+    "Skills": "Habilidades",
+    "Education": "Estudios",
+    "Experience": "Experiencia",
+    "Contact": "Contacto",
+    "About Me": "Sobre mí",
     "hero_title": "Hola, soy Toni",
     "hero_subtitle1": "Desarrollador de software y web",
     "hero_subtitle2": "Especialista en Ciberseguridad",
-    "hero_content": "Actualmente soy analista programador y jefe de proyecto. Estoy especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo."
+    "hero_content": "Actualmente soy analista programador y jefe de proyecto. Estoy especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.",
+    "about_me": "<p>Hola mi nombre es Toni! Soy un desarrollador Full-stack apasionado por aprender cosas nuevas. Me encanta aprender nuevas tecnologías y estar al día de las novedades del mundo del desarrollo.</p><p>Una de las cosas que más me gustan de la programación es que me permite encontrar soluciones para todo, por eso soy un gran fan del scripting. Si tengo que hacer cualquier cosa, seguro que se puede automatizar con un script.</p><p>En constante aprendizaje y con la música siempre puesta, a día de hoy estoy especializandome en ciberseguridad, aunque las horas se me pasan mucho mas rapido en el Frontend.</p><p>Algún día me gustaria llegar a ser todo un maestro de JavaScript, pero como cambia cada año es dificil seguir el ritmo 😂</p><p>Siempre preparado para nuevos retos.</p>",
+    "skills_content": "Mis habilidades más interesantes:",
+    "Bachillerato Tecnológico": "Bachillerato Tecnológico",
+    "ASIX": "Superior Technician in Network IT systems administrator",
+    "DAW": "Superior Technician in Web applications development",
+    "DAM": "Superior Technician in Multiplatform applications development",
+    "Curso especialización Ciberseguridad": "Curso especialización Ciberseguridad"
 }

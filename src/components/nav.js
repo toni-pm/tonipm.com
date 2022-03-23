@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { navItems, social } from 'config'
 import { KEY_CODES } from '../utils';
@@ -217,7 +218,7 @@ const NavbarLinks = ({ open }) => {
       {
         navItems &&
         navItems.map(({ url, name }, i) => (
-          <NavItem key={i} to={url}>{name}</NavItem>
+          <NavItem key={i} to={url}><Trans>{name}</Trans></NavItem>
         ))
       }
       <ul className="languages">

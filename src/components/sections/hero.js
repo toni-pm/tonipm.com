@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 
