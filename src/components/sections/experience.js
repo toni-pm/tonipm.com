@@ -3,36 +3,32 @@ import Fade from 'react-reveal/Fade'
 import { Trans } from 'gatsby-plugin-react-i18next';
 import { experience } from 'config'
 import styled from 'styled-components'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import CustomTabList from 'components/tablist'
+
+const StyledSection = styled.section`
+  max-width: 900px;
+`
 
 const Experience = () => {
   return (
-    <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
-      <section id='experience'>
+    <Fade right duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+      <StyledSection id='experience'>
         <h2><Trans>Experience</Trans></h2>
 
         <div className='inner'>
           <div>
-            <Tabs>
-              <TabList>
-                {experience && experience.map((item, i) => <Tab key={i}>{item.company}</Tab>)}
-              </TabList>
-
-              {experience && experience.map((item, i) =>
-                <TabPanel key={i}>
-                  <div>
-                    <h3>{item.job}</h3>
-                    <p>{item.start} - {item.active ? ' Present' : item.end}</p>
-                    <ul>
-                      {item.functions && item.functions.map((func, j) => <li key={j}>{func}</li>)}
-                    </ul>
-                  </div>
-                </TabPanel>)}
-            </Tabs>
+            <CustomTabList items={experience} title={item => item.company} panel={item =>
+              <div>
+                <h3>{item.job}</h3>
+                <p>{item.start} - {item.active ? <Trans>Present</Trans> : item.end}</p>
+                <ul>
+                  {item.functions && item.functions.map((func, j) => <li key={j}>{func}</li>)}
+                </ul>
+              </div>}>
+            </CustomTabList>
           </div>
         </div>
-      </section>
+      </StyledSection>
     </Fade>
   )
 }

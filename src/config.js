@@ -47,71 +47,88 @@ module.exports = {
     },
     {
       name: 'Docker',
-      level: 85
+      level: 85,
+      tagCloud: true
     },
     {
       name: 'Bash',
-      level: 90
+      level: 90,
+      tagCloud: true
     },
     {
       name: 'HTML',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'CSS',
-      level: 90
+      level: 90,
+      tagCloud: true
     },
     {
       name: 'JavaScript',
-      level: 90
+      level: 90,
+      tagCloud: true
     },
     {
       name: 'Java',
-      level: 90
+      level: 90,
+      tagCloud: true
     },
     {
       name: 'Knockout.js',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'React.js',
-      level: 85
+      level: 85,
+      tagCloud: true
     },
     {
       name: 'Node.js & Express',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'Bootstrap',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'Python',
-      level: 70
+      level: 70,
+      tagCloud: true
     },
     {
       name: 'C#',
-      level: 40
+      level: 40,
+      tagCloud: true
     },
     {
       name: 'Angular',
-      level: 60
+      level: 60,
+      tagCloud: true
     },
     {
       name: 'Vue.js',
-      level: 70
+      level: 70,
+      tagCloud: true
     },
     {
       name: 'PHP',
-      level: 70
+      level: 70,
+      tagCloud: true
     },
     {
       name: 'PostgreSQL',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'MySQL & MariaDB',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'Oracle SQL',
@@ -123,15 +140,18 @@ module.exports = {
     },
     {
       name: 'MongoDB',
-      level: 70
+      level: 70,
+      tagCloud: true
     },
     {
       name: 'Wordpress/Joomla',
-      level: 100
+      level: 100,
+      tagCloud: true
     },
     {
       name: 'RabbitMQ',
-      level: 80
+      level: 80,
+      tagCloud: true
     },
     {
       name: 'Cordova/Phonegap/Ionic',
@@ -143,7 +163,8 @@ module.exports = {
     },
     {
       name: 'AWS',
-      level: 70
+      level: 70,
+      tagCloud: true
     }
   ],
   education: [

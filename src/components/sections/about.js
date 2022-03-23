@@ -12,7 +12,7 @@ const StyledSection = styled.section`
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       display: block;
     }
   }
@@ -23,7 +23,7 @@ const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin: 50px auto 0;
     width: 70%;
   }
@@ -77,28 +77,26 @@ const StyledPic = styled.div`
 const About = () => {
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
-      <StyledSection>
-        <section id='about'>
-          <h2><Trans>About Me</Trans></h2>
+      <StyledSection id='about'>
+        <h2><Trans>About Me</Trans></h2>
 
-          <div className='inner'>
-            <div>
-              <Trans>about_me</Trans>
-            </div>
-            <StyledPic>
-              <div className='wrapper'>
-                <StaticImage
-                  className="img"
-                  src="../../images/me1.jpeg"
-                  width={500}
-                  quality={95}
-                  formats={['AUTO', 'WEBP', 'AVIF']}
-                  alt="Toni"
-                />
-              </div>
-            </StyledPic>
+        <div className='inner'>
+          <div>
+            <Trans>about_me</Trans>
           </div>
-        </section>
+          <StyledPic>
+            <div className='wrapper'>
+              <StaticImage
+                className="img"
+                src="../../images/me1.jpeg"
+                width={500}
+                quality={95}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Toni"
+              />
+            </div>
+          </StyledPic>
+        </div>
       </StyledSection>
     </Fade>
   )

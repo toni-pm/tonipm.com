@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Trans } from 'gatsby-plugin-react-i18next';
+import { skills } from 'config'
+import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 
-const StyledHero = styled.div`
+const StyledHero = styled.section`
+  min-height: 100vh;
+  padding: 0 0 0 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  .tagcloud {
+    margin-left: 20px;
+  }
 
   h1 {
     margin: 0px 0px 0px 0px;
@@ -15,9 +26,36 @@ const StyledHero = styled.div`
   h2, h3 {
     font-size: clamp(30px, 5vw, 50px);
   }
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    margin-top: 80px !important;
+  
+    .tagcloud {
+      margin-left: 0px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `
 
 const Hero = () => {
+
+  const texts = skills.map(skill => skill.tagCloud ? skill.name : null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (isMounted) {
+      return;
+    }
+    TagCloud('.tagcloud', texts, {
+      radius: 250,
+      maxSpeed: 'slow'
+    });
+    setIsMounted(true)
+  }, []);
 
   const one = <h1><Trans>hero_title</Trans></h1>;
   const two = <h2><Trans>hero_subtitle1</Trans></h2>;
@@ -33,13 +71,14 @@ const Hero = () => {
   const items = [one, two, three, four];
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
-      <section id='hero'>
-        <StyledHero>
+      <StyledHero id='hero'>
+        <div>
           {items.map((item, i) => (
             <div>{item}</div>
           ))}
-        </StyledHero>
-      </section>
+        </div>
+        <div className='tagcloud'></div>
+      </StyledHero>
     </Fade>
   )
 }

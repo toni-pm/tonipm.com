@@ -8,7 +8,7 @@ import { Icon } from 'components/icons'
 import styled from 'styled-components'
 
 const Navigation = styled.nav`
-  width: 10rem;
+  width: 11rem;
   background-color: var(--nav-bg-color);
   height: 100vh;
   position: fixed;
@@ -25,6 +25,29 @@ const Navigation = styled.nav`
   -webkit-box-shadow: 6px 4px 14px 5px var(--shadow); 
   box-shadow: 6px 4px 14px 5px var(--shadow);
 
+  .languages {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+
+    li {
+      margin: 0 5px;
+
+      a {
+        text-decoration: none;
+        color: var(--nav-color);
+
+        :hover {
+          color: var(--nav-color-hover);
+          ::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     background-color: var(--nav-bg-color-mobile);
     position: sticky;
@@ -37,6 +60,10 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
     padding: 10px;
+
+    .languages {
+      display: none;
+    }
   }
 `
 
@@ -46,6 +73,7 @@ const Navbox = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 25px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -149,18 +177,22 @@ const StyledLinks = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  & .logo {    
+  .logo {    
+    display: ${props => (props.open ? 'flex' : 'none')};
+  }
+
+  .languages {    
     display: ${props => (props.open ? 'flex' : 'none')};
   }
 `
 
 const StyledSocial = styled.ul`
   display: flex;
-  flex - direction: row;
-  align - items: flex - start;
-  margin - top: 30px;
+  flex-direction: row;
+  align-items: flex - start;
+  margin-top: 30px;
   padding: 0;
-  list - style: none;
+  list-style: none;
 
   @media(max-width: 768px) {
     display: ${props => (props.open ? 'flex' : 'none')};
@@ -172,7 +204,7 @@ const StyledSocial = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background - color: var(--light - slate);
+    background-color: var(--light - slate);
   }
 
   li {
@@ -198,22 +230,26 @@ const StyledSocial = styled.ul`
   }
 `
 
-const NotDisplay768 = styled.div`
+const HeaderLogo = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   @media(max-width: 768px) {
     justify-content: flex-start;
-    padding-left: 50px;
+    padding-left: ${props => (props.open ? '0' : '50px')};
   }
 `
 
 const NavbarLinks = ({ open }) => {
-  const { languages, originalPath } = useI18next();
   return (
     <StyledLinks open={open}>
       <Link to='/' style={{ "margin-bottom": "20px" }}>
-        <Logo />
+        <HeaderLogo open={open}>
+          <Logo />
+          <LanguageLinks></LanguageLinks>
+        </HeaderLogo>
       </Link>
       {
         navItems &&
@@ -221,16 +257,22 @@ const NavbarLinks = ({ open }) => {
           <NavItem key={i} to={url}><Trans>{name}</Trans></NavItem>
         ))
       }
-      <ul className="languages">
-        {languages.map((lng) => (
-          <li key={lng}>
-            <Link to={originalPath} language={lng}>
-              {lng}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </StyledLinks >
+  )
+}
+
+const LanguageLinks = () => {
+  const { languages, originalPath } = useI18next();
+  return (
+    <ul className="languages">
+      {languages.map((lng) => (
+        <li key={lng}>
+          <Link to={originalPath} language={lng}>
+            {lng}
+          </Link>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -292,9 +334,10 @@ const Nav = ({ isHome }) => {
         : (
           <>
             <Link to='/'>
-              <NotDisplay768>
+              <HeaderLogo>
                 <Logo />
-              </NotDisplay768>
+                <LanguageLinks></LanguageLinks>
+              </HeaderLogo>
             </Link>
             <Navbox open>
               <NavbarLinks open={navbarOpen} />

@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Fade from 'react-reveal/Fade'
-import { Trans } from 'gatsby-plugin-react-i18next';
+import Tada from 'react-reveal/Tada';
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import styled from 'styled-components'
+
+const StyledSection = styled.section`
+  max-width: 900px;
+`
 
 const Form = styled.form`
   * {box-sizing: border-box;}
 
-  input[type=text], input[type=mail], select, textarea {
+  input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -37,28 +42,57 @@ const Form = styled.form`
 `
 
 const Contact = () => {
+  const { t } = useTranslation();
+  const [name, setName] = useState('');
+  const [mail, setMail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const sendMessage = e => {
+    e.preventDefault();
+
+    const body = {
+      name,
+      mail,
+      subject,
+      message
+    }
+
+    if (!body.name) {
+      return false;
+    }
+    if (!body.mail) {
+      return false;
+    }
+    if (!body.message) {
+      return false;
+    }
+    console.log('sendMessage', body);
+  }
+
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
-      <section id='contact'>
+      <StyledSection id='contact'>
         <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
-          <Form>
-            <label for="lname">Name</label>
-            <input type="text" id="lname" name="name" placeholder="Name" />
+          <Form onSubmit={sendMessage}>
+            <label for="lname"><Trans>Name</Trans></label>
+            <input type="text" id="lname" name="name" required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
 
-            <label for="lname">Mail</label>
-            <input type="mail" id="lemail" name="email" placeholder="Email" />
+            <label for="lname"><Trans>Mail</Trans></label>
+            <input type="email" id="lemail" name="email" required placeholder={t('Mail')} onChange={(e) => setMail(e.target.value)} />
 
-            <label for="lsubject">Subject</label>
-            <input type="text" id="lsubject" name="subject" placeholder="Subject" />
+            <label for="lsubject"><Trans>Subject</Trans></label>
+            <input type="text" id="lsubject" name="subject" placeholder={t('Subject')} onChange={(e) => setSubject(e.target.value)} />
 
-            <label for="txtmessage">Message</label>
-            <textarea id="txtmessage" name="message" placeholder="Message"></textarea>
+            <label for="txtmessage"><Trans>Message</Trans></label>
+            <textarea id="txtmessage" name="message" required placeholder={t('Message')} onChange={(e) => setMessage(e.target.value)}></textarea>
 
-            <input type="submit" value="Send message!" />
+            <Tada><input type="submit" value={t('Send message!')} /></Tada>
           </Form>
-        </div></section>
+        </div>
+      </StyledSection>
     </Fade>
   )
 }

@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-color);
     line-height: var(--line-height);
     font-family: var(--font-family);
+    font-size: var(--fz-xl);
 
     * {
       /*filter: blur(5px) brightness(0.7);
@@ -51,13 +52,20 @@ const GlobalStyle = createGlobalStyle`
     margin: 5px 0;
   }
 
+  h2 {
+    font-size: clamp(25px, 4.5vw, 40px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 4vw, 30px);
+  }
+
   section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 0 0 0 5vw;
+    padding: 100px 5vw;
+    margin: 0 auto;
   }
 
   p {
@@ -74,75 +82,6 @@ const GlobalStyle = createGlobalStyle`
 
   .inner {
     width: 100%;
-  }
-
-  .skills {
-    width: 100%;
-    background-color: #ddd;
-  }
-
-  .skills-inner {
-    text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    background-color: #04AA6D;
-  }
-  
-  .react-tabs {
-    display: flex;
-  }
-
-  .react-tabs__tab-list {  
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    border: none;
-  }
-
-  .react-tabs__tab {
-    padding: 12px 20px;
-    border-left: 4px solid var(--bg-color);
-
-    &:hover {
-      background: var(--bg-color-hover);
-      border-left: 4px solid var(--bg-color-hover);
-    }
-
-    &:focus:after {
-      content: none;
-    }
-
-    &.react-tabs__tab--selected {
-      background: var(--bg-color-hover);
-      border-color: var(--bg-color-hover);
-      border-left: 4px solid var(--primary);
-      color: white;
-      border-radius: 0px;
-    }
-  }
-
-  .react-tabs__tab-panel {
-    padding: 30px
-  }
-
-  @media (max-width: 768px) {
-    .react-tabs {
-      display: block;
-    }
-
-    .react-tabs__tab-list {  
-      display: flex;
-      flex-direction: row;
-      overflow: auto hidden;
-      width: 100%;
-    }
-    
-    .react-tabs__tab { 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   ${TransitionStyles};
