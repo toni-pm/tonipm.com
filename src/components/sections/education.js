@@ -27,7 +27,7 @@ const Education = () => {
                 <p>{item.location}</p>
                 <p>{item.active ? <Trans>Present</Trans> : item.year}</p>
                 <ul>
-                  {item.topics && item.topics.map((topic, j) => <li key={j}>{topic}</li>)}
+                  {item.topics && item.topics.map((topic, j) => <li key={j}><Trans>{topic}</Trans></li>)}
                 </ul>
               </div>}>
             </CustomTabList>

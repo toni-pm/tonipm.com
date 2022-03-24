@@ -178,12 +178,12 @@ module.exports = {
       year: 2014,
       location: 'Institut Montilivi',
       topics: [
-        'FONAMENTS DE hardware',
-        'ADMINISTRACIÓ DE SO',
-        'PLANIFICACIÓ I ADMINISTRACIÓ DE XARXES',
-        'SERVEIS DE XARXA I INTERNET',
-        'ADMINISTRACIÓ DE SGBD',
-        'SEGURETAT I ALTA DISPONIBILITAT'
+        'Hardware fundamentals',
+        'Operating System administration',
+        'Network planning and administration',
+        'Network and internet services',
+        'DBMS administration',
+        'Security and high availability'
       ]
     },
     {
@@ -191,11 +191,11 @@ module.exports = {
       year: 2016,
       location: 'Institut Montilivi',
       topics: [
-        'ENTORNS DE DESENVOLUPAMENT',
-        'DESENVOLUPAMENT WEB EN ENTORN CLIENT',
-        'DESENVOLUPAMENT WEB EN ENTORN SERVIDOR',
-        'DESPLEGAMENT D\'APLICACIONS WEB',
-        'DISSENY D\'INTERFICIES WEB'
+        'Development environments',
+        'Frontend development',
+        'Backend development',
+        'Web application deployment',
+        'Web interface design'
       ]
     },
     {
@@ -203,12 +203,11 @@ module.exports = {
       year: 2017,
       location: 'Institut Montilivi',
       topics: [
-        'ENTORNS DE DESENVOLUPAMENT',
-        'ACCÉS A DADES',
-        'DISSENY D\'INTERFÍCIES MULTIPLATAFORMA',
-        'PROGRAMACIÓ MULTIMÈDIA I DISP. MÒBILS',
-        'PROGRAMACIÓ DE SERVEIS I PROCESSOS', ,
-        'Game development',
+        'Data access',
+        'Multi-platform interface design',
+        'Multimedia programming and mobile devices',
+        'Programming of services and proces',
+        'Video game development',
         'ERP',
       ]
     },
@@ -218,12 +217,12 @@ module.exports = {
       active: true,
       location: 'Institut Montilivi',
       topics: [
-        'Incidents de ciberseguretat',
-        'ENFORTIMENT DE XARXES I SISTEMES',
-        'POSADA EN PRODUCCIÓ SEGURA',
-        'ANÀLISI FORENSE INFORMÀTIC',
-        'HÀCKING ÈTIC',
-        'NORMATIVA DE CIBERSEGURETAT',
+        'Cybersecurity incidents',
+        'Strengthening networks and systems',
+        'Safe production',
+        'Computer forensic analysis',
+        'Ethical Hacking',
+        'Cybersecurity regulations',
       ]
     }
   ],
@@ -234,9 +233,9 @@ module.exports = {
       start: 'June 2014',
       end: 'October 2014',
       functions: [
-        'Systems administration and installation.',
-        'Web development.',
-        'Hardware repair.'
+        'functions_mecacentre_01',
+        'functions_mecacentre_02',
+        'functions_mecacentre_03'
       ]
     },
     {
@@ -245,7 +244,7 @@ module.exports = {
       start: 'June 2014',
       end: 'October 2014',
       functions: [
-        'Controller of parking and blue zone of the town of Begur.'
+        'functions_hibiscus_01'
       ]
     },
     {
@@ -254,11 +253,11 @@ module.exports = {
       start: 'April 2016',
       active: true,
       functions: [
-        'Responsible for software projects.',
-        'Analysis, planning, creation and management of projects and work groups.',
-        'Design of business solutions at the software level.',
-        'Management of the architecture of physical and cloud servers (AWS).',
-        'Creation of websites and mobile Apps.'
+        'functions_dset_01',
+        'functions_dset_02',
+        'functions_dset_03',
+        'functions_dset_04',
+        'functions_dset_05'
       ]
     },
     {
@@ -267,10 +266,8 @@ module.exports = {
       start: '2018',
       active: true,
       functions: [
-        'Creation of web pages and Webmaster of own sites.',
-        `+50 web pages created for public entities or small companies at provincial level
-        using content managers such as Wordpress, Joomla or handmade (code) for
-        specific needs.`
+        'functions_freelancer_01',
+        'functions_freelancer_02'
       ]
     }
   ],

@@ -22,7 +22,7 @@ const Experience = () => {
                 <h3>{item.job}</h3>
                 <p>{item.start} - {item.active ? <Trans>Present</Trans> : item.end}</p>
                 <ul>
-                  {item.functions && item.functions.map((func, j) => <li key={j}>{func}</li>)}
+                  {item.functions && item.functions.map((func, j) => <li key={j}><Trans>{func}</Trans></li>)}
                 </ul>
               </div>}>
             </CustomTabList>
