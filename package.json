@@ -41,6 +41,7 @@
     "react-i18next": "^11.16.1",
     "react-image-gallery": "^1.2.7",
     "react-motion": "^0.5.2",
+    "react-responsive-carousel": "^3.2.23",
     "react-reveal": "^1.2.2",
     "react-tabs": "^4.0.1",
     "react-tagcloud": "^2.2.0",
