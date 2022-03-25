@@ -236,6 +236,10 @@ module.exports = {
         'functions_mecacentre_01',
         'functions_mecacentre_02',
         'functions_mecacentre_03'
+      ],
+      gallery: [
+        { original: 'me1.jpeg' },
+        { original: 'https://picsum.photos/id/1018/1000/600/' }
       ]
     },
     {
@@ -245,6 +249,10 @@ module.exports = {
       end: 'October 2014',
       functions: [
         'functions_hibiscus_01'
+      ],
+      gallery: [
+        { original: '../../images/me1.jpeg' },
+        { original: 'https://picsum.photos/id/1018/1000/600/' }
       ]
     },
     {
