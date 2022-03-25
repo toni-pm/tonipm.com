@@ -4,6 +4,7 @@ import { skills } from 'config'
 import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image'
 
 const StyledSection = styled.section`
   max-width: 900px;
@@ -49,6 +50,14 @@ const Skills = () => {
                 <Skill level={skill.level}><div style={{ "width": `${skill.level}%` }}></div></Skill>
               </li>)}
           </ul>
+              <StaticImage
+                className="img"
+                src="../../images/furbo.jpeg"
+                width={300}
+                quality={95}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Furbo"
+              />
         </div>
       </StyledSection>
     </Fade>

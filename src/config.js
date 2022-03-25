@@ -18,6 +18,10 @@ module.exports = {
       url: '/#experience'
     },
     {
+      name: 'Gallery',
+      url: '/#gallery'
+    },
+    {
       name: 'Contact',
       url: '/#contact'
     }
@@ -165,118 +169,14 @@ module.exports = {
       name: 'AWS',
       level: 70,
       tagCloud: true
-    }
-  ],
-  education: [
-    {
-      name: 'Bachillerato Tecnológico',
-      year: 2012,
-      location: 'IES Frederic Martí Carreras'
     },
     {
-      name: 'ASIX',
-      year: 2014,
-      location: 'Institut Montilivi',
-      topics: [
-        'Hardware fundamentals',
-        'Operating System administration',
-        'Network planning and administration',
-        'Network and internet services',
-        'DBMS administration',
-        'Security and high availability'
-      ]
+      name: 'FIFA',
+      level: 100
     },
     {
-      name: 'DAW',
-      year: 2016,
-      location: 'Institut Montilivi',
-      topics: [
-        'Development environments',
-        'Frontend development',
-        'Backend development',
-        'Web application deployment',
-        'Web interface design'
-      ]
-    },
-    {
-      name: 'DAM',
-      year: 2017,
-      location: 'Institut Montilivi',
-      topics: [
-        'Data access',
-        'Multi-platform interface design',
-        'Multimedia programming and mobile devices',
-        'Programming of services and proces',
-        'Video game development',
-        'ERP',
-      ]
-    },
-    {
-      name: 'Curso especialización Ciberseguridad',
-      year: 2021,
-      active: true,
-      location: 'Institut Montilivi',
-      topics: [
-        'Cybersecurity incidents',
-        'Strengthening networks and systems',
-        'Safe production',
-        'Computer forensic analysis',
-        'Ethical Hacking',
-        'Cybersecurity regulations',
-      ]
-    }
-  ],
-  experience: [
-    {
-      company: 'Meca Centre S.L.',
-      job: 'Senior Technician in Systems Administration',
-      start: 'June 2014',
-      end: 'October 2014',
-      functions: [
-        'functions_mecacentre_01',
-        'functions_mecacentre_02',
-        'functions_mecacentre_03'
-      ],
-      gallery: [
-        { original: 'me1.jpeg' },
-        { original: 'https://picsum.photos/id/1018/1000/600/' }
-      ]
-    },
-    {
-      company: 'Hibiscus Town S.L.',
-      job: 'Parking controller',
-      start: 'June 2014',
-      end: 'October 2014',
-      functions: [
-        'functions_hibiscus_01'
-      ],
-      gallery: [
-        { original: '../../images/me1.jpeg' },
-        { original: 'https://picsum.photos/id/1018/1000/600/' }
-      ]
-    },
-    {
-      company: 'DSET SOLUTIONS',
-      job: 'Programmer analyst & Project manager',
-      start: 'April 2016',
-      active: true,
-      functions: [
-        'functions_dset_01',
-        'functions_dset_02',
-        'functions_dset_03',
-        'functions_dset_04',
-        'functions_dset_05'
-      ]
-    },
-    {
-      company: 'Freelancer',
-      job: 'Web Designer & Webmaster',
-      start: '2018',
-      active: true,
-      functions: [
-        'functions_freelancer_01',
-        'functions_freelancer_02'
-      ]
+      name: 'FURBO',
+      level: 100
     }
   ],
   colors: {

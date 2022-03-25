@@ -74,7 +74,7 @@ const Experience = () => {
                   const { company, title, range, url, gallery } = frontmatter;
                   let images = []
                   if (gallery) {
-                    images = gallery.map((node) => {
+                    images = gallery.map(node => {
                       const image = node.img.childImageSharp
                       image.caption = node.caption
                       return image
