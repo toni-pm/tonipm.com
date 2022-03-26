@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import TabsStyles from 'styles/TabsStyles'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
+import { galleryCaptions } from 'config'
 
 const StyledSection = styled.section`
   max-width: 900px;
@@ -23,6 +24,7 @@ const GallerySection = () => {
             {
                 edges {
                     node {
+                        relativePath
                         childImageSharp {
                             thumb: gatsbyImageData(
                                 width: 300
@@ -36,7 +38,10 @@ const GallerySection = () => {
             }
         }
     `);
-  const images = data.allFile.edges.map(node => node.node.childImageSharp)
+  const images = data.allFile.edges.map(node => {
+    node.node.childImageSharp.caption = galleryCaptions[node.node.relativePath.split('/')[1]]
+    return node.node.childImageSharp
+  })
 
   return (
     <Fade right duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>

@@ -179,6 +179,16 @@ module.exports = {
       level: 100
     }
   ],
+  galleryCaptions: {
+    "bajito.jpg": 'No soy precisamente alto.',
+    "bigfoot.jpg": 'Siempre acechando.',
+    "bolos.jpg": 'No se me da precisamente bien jugar a los bolos.',
+    "cascos.jpg": 'Siempre estoy escuchando música.',
+    "coche.jpg": 'Una vez me dejé el freno de mano sin quitar y mi coche acabo en mitad del bosque.',
+    "tibidabo.jpg": 'Operado de apendicitis.',
+    "tv.jpg": 'A veces voy de público a la TV, como los viejos.',
+    "yonki.jpg": 'Dame un euro.'
+  },
   colors: {
     green: '#64ffda',
     navy: '#0a192f',
