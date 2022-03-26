@@ -1,8 +1,9 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Trans } from 'gatsby-plugin-react-i18next';
+import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components';
+import 'font-awesome/css/font-awesome.min.css';
 
 const StyledSection = styled.section`
   max-width: 900px;
@@ -15,6 +16,12 @@ const StyledSection = styled.section`
     @media (max-width: 900px) {
       display: block;
     }
+  }
+
+  .resume {
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
   }
 `;
 
@@ -61,6 +68,8 @@ const StyledPic = styled.div`
 
     &:hover,
     &:focus {
+      background-color: transparent;
+
       &:after {
         top: 15px;
         left: 15px;
@@ -75,6 +84,11 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
+  const { language } = useI18next();
+  const resumeLink = language === 'es' ? '/Toni_Peraira_CV_es.pdf'
+    : language === 'ca' ? '/Toni_Peraira_CV_ca.pdf'
+      : '/Toni_Peraira_CV_en.pdf'
+
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
       <StyledSection id='about'>
@@ -84,18 +98,26 @@ const About = () => {
           <div>
             <Trans>about_me</Trans>
           </div>
-          <StyledPic>
-            <div className='wrapper'>
-              <StaticImage
-                className="img"
-                src="../../images/me1.jpeg"
-                width={500}
-                quality={95}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt="Toni"
-              />
+          <div>
+            <StyledPic>
+              <div className='wrapper'>
+                <StaticImage
+                  className="img"
+                  src="../../images/me1.jpeg"
+                  width={500}
+                  quality={95}
+                  formats={['AUTO', 'WEBP', 'AVIF']}
+                  alt="Toni"
+                />
+              </div>
+            </StyledPic>
+            <div className="resume">
+              <a href={resumeLink} className="btn" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-download"></i>
+                <Trans>Download Resume</Trans>
+              </a>
             </div>
-          </StyledPic>
+          </div>
         </div>
       </StyledSection>
     </Fade>

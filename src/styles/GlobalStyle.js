@@ -73,6 +73,64 @@ const GlobalStyle = createGlobalStyle`
     text-align: justify;
   }
 
+  a.default {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 5px 0;
+    transition: all 200ms ease-in;
+    position: relative;
+
+    :after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0%;
+      content: ".";
+      color: transparent;
+      background: var(--primary);
+      height: 2px;
+      transition: all 0.2s ease-in;
+    }
+
+    :hover {
+      color: var(--nav-color-hover);
+      ::after {
+        width: 100%;
+      }
+    }
+  }
+  
+  .btn {
+    background-color: var(--gray) !important;
+    color: var(--white);
+    font-size: var(--fz-lg);
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-align: center;
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+    }
+  
+    &:hover {
+      color: var(--primary);
+      background-color: var(--gray-light) !important;
+    }
+    
+    &:active {
+      background-color: black;
+    }
+    
+    &:visited {
+      background-color: #ccc;
+    }
+  }
+
   @media (max-width: 768px) {
     section {
       padding: 0;

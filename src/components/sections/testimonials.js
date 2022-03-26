@@ -198,8 +198,6 @@ const Testimonials = () => {
       `);
   const testimonials = data.testimonials.edges.filter(edge => edge.node.frontmatter.lang === language);
 
-  console.log('testminoiaaaaaal', testimonials)
-
   return (
     <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
       <StyledSection id='testimonials'>
@@ -217,7 +215,6 @@ const Testimonials = () => {
                 node.frontmatter.testimonials && node.frontmatter.testimonials.map((testimonial, i) => {
                   const { name, title, quote, img } = testimonial;
                   const image = getImage(img)
-                  console.log('++++++++++', img)
                   return (
                     <div>
                       <GatsbyImage image={image} />

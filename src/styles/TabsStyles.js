@@ -1,6 +1,7 @@
 
 import styled from 'styled-components'
 import 'react-tabs/style/react-tabs.css';
+import mixins from 'styles/mixins'
 
 const StyledTabs = styled.div`
     .react-tabs {
@@ -13,6 +14,7 @@ const StyledTabs = styled.div`
         min-width: 220px;
         max-width: 270px;
         border: none;
+        font-size: var(--fz-md);
     }
 
     .react-tabs__tab {
@@ -38,7 +40,35 @@ const StyledTabs = styled.div`
     }
 
     .react-tabs__tab-panel {
-        padding: 30px
+        padding: 30px;
+        
+        ul {
+            ${mixins.fancyList};
+        }
+
+        h3 {
+            margin-bottom: 2px;
+            font-size: var(--fz-xl);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .company {
+            font-size: var(--fz-xl);
+            color: var(--primary);
+        }
+
+        .location {
+            font-size: var(--fz-md);
+            color: var(--light-slate);
+            margin: 5px 0;
+        }
+
+        .range {
+            font-size: var(--fz-xs);
+            color: var(--light-slate);
+            margin: 5px 0 10px 0;
+        }
     }
 
     @media (max-width: 768px) {
@@ -51,6 +81,7 @@ const StyledTabs = styled.div`
             flex-direction: row;
             overflow: auto hidden;
             width: 100%;
+            max-width: 100%;
         }
         
         .react-tabs__tab { 

@@ -1,5 +1,5 @@
 ---
-lang: ca
+lang: es
 date: '2015-06-01'
 title: 'Auxiliar aparcamiento'
 company: 'Hibiscus Town S.L.'

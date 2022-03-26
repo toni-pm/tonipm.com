@@ -36,8 +36,7 @@ const GallerySection = () => {
             }
         }
     `);
-    const images = data.allFile.edges.map(node => node.node.childImageSharp)
-    console.log(images)
+  const images = data.allFile.edges.map(node => node.node.childImageSharp)
 
   return (
     <Fade right duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
@@ -45,7 +44,7 @@ const GallerySection = () => {
         <h2><Trans>Gallery</Trans></h2>
 
         <div className='inner'>
-                      <Gallery images={images} />
+          <Gallery images={images} />
         </div>
       </StyledSection>
     </Fade>

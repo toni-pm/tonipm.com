@@ -13,9 +13,6 @@ const StyledSection = styled.section`
   max-width: 900px;
 `
 
-const StyledTabList = styled.div`
-`;
-
 const Education = () => {
   const { language } = useI18next();
   const data = useStaticQuery(graphql`
@@ -86,8 +83,8 @@ const Education = () => {
                   return (
                     <TabPanel key={i}>
                       <h3>{name}</h3>
-                      <div>{location}</div>
-                      <p>{range}</p>
+                      <p className='location'>{location}</p>
+                      <p className='range'>{range}</p>
                       <div dangerouslySetInnerHTML={{ __html: html }} />
                       <Gallery images={images} />
                     </TabPanel>

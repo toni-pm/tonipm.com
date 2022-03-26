@@ -21,6 +21,7 @@
     "@mdx-js/react": "^1.6.22",
     "TagCloud": "^2.2.0",
     "babel-plugin-styled-components": "^2.0.6",
+    "font-awesome": "^4.7.0",
     "gatsby": "^4.9.2",
     "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-mdx": "^3.9.1",

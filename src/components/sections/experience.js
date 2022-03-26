@@ -72,6 +72,7 @@ const Experience = () => {
                 experienceData.map(({ node }, i) => {
                   const { frontmatter, html } = node;
                   const { company, title, range, url, gallery } = frontmatter;
+                  console.log(frontmatter)
                   let images = []
                   if (gallery) {
                     images = gallery.map(node => {
@@ -84,8 +85,8 @@ const Experience = () => {
                   return (
                     <TabPanel key={i}>
                       <h3>{title}</h3>
-                      <div>{company}</div>
-                      <p>{range}</p>
+                      <a className='company default' href={url} target="_blank"> @ {company}</a>
+                      <p className='range'>{range}</p>
                       <div dangerouslySetInnerHTML={{ __html: html }} />
                       <Gallery images={images} />
                     </TabPanel>

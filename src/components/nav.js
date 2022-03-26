@@ -35,7 +35,6 @@ const Navigation = styled.nav`
       margin: 0 5px;
 
       a {
-        text-decoration: none;
         color: var(--nav-color);
 
         :hover {
@@ -135,33 +134,12 @@ const Hamburger = styled.div`
 `
 
 const NavItem = styled(Link)`
-  text-decoration: none;
-  color: var(--nav-color);
+  color: var(--nav-color) !important;
   display: inline-block;
-  white-space: nowrap;
-  margin: 0 1vw;
-  padding: 15px 0;
-  transition: all 200ms ease-in;
-  position: relative;
+  padding: 15px 0 !important;
 
-  :after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0%;
-    content: ".";
-    color: transparent;
-    background: var(--nav-color-hover);
-    height: 2px;
-    transition: all 0.3s ease-in;
-  }
-
-  :hover {
-    color: var(--nav-color-hover);
-    ::after {
-      width: 100%;
-    }
+  &:hover {
+    color: var(--primary) !important;
   }
 
   @media (max-width: 768px) {
@@ -245,16 +223,16 @@ const HeaderLogo = styled.div`
 const NavbarLinks = ({ open }) => {
   return (
     <StyledLinks open={open}>
-      <Link to='/' style={{ "margin-bottom": "20px" }}>
-        <HeaderLogo open={open}>
+      <HeaderLogo open={open} style={{ "margin-bottom": "20px" }}>
+        <Link to='/' className='default'>
           <Logo />
-          <LanguageLinks></LanguageLinks>
-        </HeaderLogo>
-      </Link>
+        </Link>
+        <LanguageLinks></LanguageLinks>
+      </HeaderLogo>
       {
         navItems &&
         navItems.map(({ url, name }, i) => (
-          <NavItem key={i} to={url}><Trans>{name}</Trans></NavItem>
+          <NavItem className='default' key={i} to={url}><Trans>{name}</Trans></NavItem>
         ))
       }
     </StyledLinks >
@@ -267,7 +245,7 @@ const LanguageLinks = () => {
     <ul className="languages">
       {languages.map((lng) => (
         <li key={lng}>
-          <Link to={originalPath} language={lng}>
+          <Link to={originalPath} className='default' language={lng}>
             {lng}
           </Link>
         </li>
@@ -333,12 +311,12 @@ const Nav = ({ isHome }) => {
         )
         : (
           <>
-            <Link to='/'>
-              <HeaderLogo>
+            <HeaderLogo>
+              <Link to='/'>
                 <Logo />
-                <LanguageLinks></LanguageLinks>
-              </HeaderLogo>
-            </Link>
+              </Link>
+              <LanguageLinks></LanguageLinks>
+            </HeaderLogo>
             <Navbox open>
               <NavbarLinks open={navbarOpen} />
             </Navbox>

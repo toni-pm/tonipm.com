@@ -22,19 +22,6 @@ const Form = styled.form`
     resize: vertical;
   }
 
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
   textarea {
     height: 150px;
     resize: none;
@@ -89,7 +76,7 @@ const Contact = () => {
             <label for="txtmessage"><Trans>Message</Trans></label>
             <textarea id="txtmessage" name="message" required placeholder={t('Message')} onChange={(e) => setMessage(e.target.value)}></textarea>
 
-            <Tada><input type="submit" value={t('Send message!')} /></Tada>
+            <Tada><input className='btn' type="submit" value={t('Send message!')} /></Tada>
           </Form>
         </div>
       </StyledSection>

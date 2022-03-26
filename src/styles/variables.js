@@ -2,12 +2,16 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
+    --white: #e6f1ff;
+    --gray: #444;
+    --gray-light: #666;
     --primary: #9fef00;
     --secondary: #334d00;
     --bg-color: #20202d;
     --bg-color-hover: #35354b;
     --title-color: #f0f0f4;
     --text-color: #c3c3d5;
+    --light-slate: #a8b2d1;
     --nav-bg-color: #181822;
     --nav-bg-color-mobile: #181818ee;
     --nav-color: #ccc;
