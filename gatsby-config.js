@@ -6,7 +6,7 @@ module.exports = {
     title: 'new',
     siteUrl: 'https://www.yourdomain.tld'
   },
-  plugins: ['gatsby-plugin-image', 'gatsby-plugin-styled-components', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
+  plugins: ['gatsby-plugin-netlify', 'gatsby-plugin-image', 'gatsby-plugin-styled-components', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
