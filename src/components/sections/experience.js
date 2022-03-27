@@ -72,7 +72,6 @@ const Experience = () => {
                 experienceData.map(({ node }, i) => {
                   const { frontmatter, html } = node;
                   const { company, title, range, url, gallery } = frontmatter;
-                  console.log(frontmatter)
                   let images = []
                   if (gallery) {
                     images = gallery.map(node => {
