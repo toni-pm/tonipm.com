@@ -184,10 +184,10 @@ module.exports = {
     "bigfoot.jpg": 'Siempre acechando.',
     "bolos.jpg": 'No se me da precisamente bien jugar a los bolos.',
     "cascos.jpg": 'Siempre estoy escuchando música.',
-    "coche.jpg": 'Una vez me dejé el freno de mano sin quitar y mi coche acabo en mitad del bosque.',
+    "coche.jpg": 'Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.',
     "tibidabo.jpg": 'Operado de apendicitis.',
-    "tv.jpg": 'A veces voy de público a la TV, como los viejos.',
-    "yonki.jpg": 'Dame un euro.'
+    "tv.jpg": 'A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.',
+    "router.jpg": 'Configurando un router.'
   },
   colors: {
     green: '#64ffda',

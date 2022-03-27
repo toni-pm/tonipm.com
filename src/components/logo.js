@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const LogoCSS = styled.div`
   position: relative;
   height: 50px;
-  width: 50px;
+  width: 43px;
   background: #9fef00;
   font-family: "Times New Roman", Times, serif;
 
@@ -33,8 +33,8 @@ const LogoCSS = styled.div`
   span {
     position: absolute;
     font-size: 2rem;
-    top: 3px;
-    left: 15px;
+    top: 2px;
+    left: 12px;
     color: #9fef00;
   }
 `

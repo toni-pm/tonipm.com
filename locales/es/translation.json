@@ -15,7 +15,15 @@
     "hero_title": "Hola, soy Toni",
     "hero_subtitle1": "Desarrollador de software y web",
     "hero_subtitle2": "Especialista en Ciberseguridad",
-    "hero_content": "Actualmente soy analista programador y jefe de proyecto. Estoy especializandome en ciberseguridad para entender los peligros informáticos que dejamos tras nuestro trabajo, que evolucionan al mismo tiempo que el desarrollo.",
-    "about_me": "<p>Hola mi nombre es Toni! Soy un desarrollador Full-stack apasionado por aprender cosas nuevas. Me encanta aprender nuevas tecnologías y estar al día de las novedades del mundo del desarrollo.</p><p>Una de las cosas que más me gustan de la programación es que me permite encontrar soluciones para todo, por eso soy un gran fan del scripting. Si tengo que hacer cualquier cosa, seguro que se puede automatizar con un script.</p><p>En constante aprendizaje y con la música siempre puesta, a día de hoy estoy especializandome en ciberseguridad, aunque las horas se me pasan mucho mas rapido en el Frontend.</p><p>Algún día me gustaria llegar a ser todo un maestro de JavaScript, pero como cambia cada año es dificil seguir el ritmo 😂</p><p>Siempre preparado para nuevos retos.</p>",
-    "skills_content": "Mis habilidades más interesantes:"
+    "hero_content": "Actualmente soy analista programador y estoy especializándome en ciberseguridad. Me gusta mucho aprender y desarrollar cosas nuevas, es un hobby que me va de perlas para escuchar música que es lo que más me gusta del mundo y me hace trabajar a tope. 🎧🎧🎧",
+    "about_me": "<p>¡Hola mi nombre es Toni Peraira! Soy un desarrollador Full-stack apasionado por aprender cosas nuevas. Me encanta aprender nuevas tecnologías y estar al día de las novedades del mundo del desarrollo.</p><p>Una de las cosas que más me gustan de la programación es que me permite encontrar soluciones para todo, por eso soy un gran fan del scripting. Si tengo que hacer cualquier cosa, seguro que se puede automatizar con un script.</p><p>En constante aprendizaje y con la música siempre puesta, a día de hoy estoy estudiando ciberseguridad, aunque las horas se me pasan mucho más rápido en el Frontend, que es lo que menos toco 😟.</p><p>Algún día me gustaría llegar a ser todo un maestro de JavaScript, pero como cambia cada año es difícil seguir el ritmo 😂</p><p>Siempre preparado para nuevos retos que me desafíen y me hagan romperme la cabeza.</p>",
+    "skills_content": "Mis habilidades más interesantes:",
+    "No soy precisamente alto.": "No soy precisamente alto.",
+    "Siempre acechando.": "Siempre acechando.",
+    "No se me da precisamente bien jugar a los bolos.": "No se me da precisamente bien jugar a los bolos.",
+    "Siempre estoy escuchando música.": "Siempre estoy escuchando música.",
+    "Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.": "Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.",
+    "Operado de apendicitis.": "Operado de apendicitis.",
+    "A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.": "A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.",
+    "Configurando un router.": "Configurando un router."
 }

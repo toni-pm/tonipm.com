@@ -11,14 +11,13 @@ const StyledTabs = styled.div`
     .react-tabs__tab-list {  
         display: flex;
         flex-direction: column;
-        min-width: 220px;
-        max-width: 270px;
         border: none;
         font-size: var(--fz-md);
     }
 
     .react-tabs__tab {
         padding: 12px 20px;
+        width: 220px;
         border-left: 4px solid var(--bg-color);
 
         &:hover {

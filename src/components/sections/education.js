@@ -79,6 +79,8 @@ const Education = () => {
                       return image
                     })
                   }
+                  console.log('+++++++++++gallery', gallery)
+                  console.log('+++++++++++images', images)
 
                   return (
                     <TabPanel key={i}>

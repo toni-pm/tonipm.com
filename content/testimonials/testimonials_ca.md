@@ -1,12 +1,11 @@
 ---
 lang: ca
 testimonials: [
+    {name: 'CR7', title: 'El Bicho', img: './cr7.png', quote: 'Al meu equip li dono un 9. A mi, un 10; a Toni Peraira un 11.'},
     {name: 'Furbo', title: 'Furbo', img: './furbo.jpeg', quote: 'Furbo.'},
-    {name: 'Ru', title: 'Mi gato', img: './furbo.jpeg', quote: 'Miau.'},
-    {name: 'Cintia', title: 'Mi mujer', img: './furbo.jpeg', quote: 'Qué va nen'},
-    {name: 'El del Kebab', title: 'El del Kebab', img: './furbo.jpeg', quote: '¿Con picante?'},
-    {name: 'Edi', title: 'Mi primo', img: './furbo.jpeg', quote: 'Perro Sánchez le sopló en la vagina a mi mujer y no le baja la regla.'},
-    {name: 'Tony', title: 'Amigo', img: './furbo.jpeg', quote: 'Me va ancha la ropa.'},
-    {name: 'CR7', title: 'El Bicho', img: './furbo.jpeg', quote: 'A mi equipo le doy un 9. A mí, un 10; a Toni Peraira un 11.".'}
+    {name: 'Ru', title: 'Gat', img: './ru.png', quote: 'Miau.'},
+    {name: 'Cintia', title: 'La meva senyora', img: './cintia.png', quote: 'Aquest noi val or. Paguin-li bé.'},
+    {name: 'Edi', title: 'Primo', img: './edi.png', quote: 'Em va fer pagar 2 euros per aparcar el cabró.'},
+    {name: 'Tony', title: 'Amigo', img: './tony.png', quote: "Toni no és comunista. Pot ser un mentider, un porc, un idiota, un comunista... però d'actor porno no té res!"}
 ]
 ---

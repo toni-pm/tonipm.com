@@ -8,6 +8,18 @@ module.exports = {
   },
   plugins: ['gatsby-plugin-image', 'gatsby-plugin-styled-components', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Toni PM',
+        short_name: 'Toni PM',
+        start_url: '/',
+        background_color: '#20202d',
+        theme_color: '#9fef00',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         resolveModules: [path.join(__dirname, 'libs')],

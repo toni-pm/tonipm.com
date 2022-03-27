@@ -15,7 +15,15 @@
     "hero_title": "Hola, sóc Toni",
     "hero_subtitle1": "Desenvolupador de software y web",
     "hero_subtitle2": "Especialista en Ciberseguretat",
-    "hero_content": "Actualment sóc analista programador i cap de projecte. Estic especialitzant-me en ciberseguretat per entendre els perills informàtics que deixem després de la nostra feina, que evolucionen alhora que el desenvolupament.",
-    "about_me": "<p>Hola el meu nom és Toni! Sóc un desenvolupador Full-Stack apassionat per aprendre coses noves. M'encanta aprendre noves tecnologies i estar al dia de les novetats del món del desenvolupament.</p><p>Una de les coses que més m'agraden de la programació és que em permet trobar solucions per a tot, per això sóc un gran fan de l'scripting. Si he de fer qualsevol cosa, segur que es pot automatitzar amb un script.</p><p>En constant aprenentatge i amb la música sempre posada, avui estic especialitzant-me en ciberseguretat, encara que les hores se'm passen molt més ràpid al Frontend.</p><p>Algun dia m'agradaria arribar a ser tot un mestre de JavaScript, però com que canvia cada any és difícil seguir el ritme 😂</p><p>Sempre preparat per a nous reptes.< /p>",
-    "skills_content": "Les meves habilitats més interessants:"
+    "hero_content": "Actualment soc analista programador i estic especialitzant-me en ciberseguretat. M'agrada molt aprendre i desenvolupar coses noves, és un hobby que em va de perles per a escoltar música que és el que més m'agrada del món i em fa treballar a tope. 🎧🎧🎧",
+    "about_me": "<p>Hola el meu nom és Toni Peraira! Soc un desenvolupador Full-stack apassionat per aprendre coses noves. M'encanta aprendre noves tecnologies i estar al dia de les novetats del món del desenvolupament.</p><p>Una de les coses que més m'agraden de la programació és que em permet trobar solucions per a tot, per això soc un gran fan del scripting. Si haig de fer qualsevol cosa, segur que es pot automatitzar amb un script.</p><p>En constant aprenentatge i amb la música sempre posada, avui dia estic estudiant ciberseguretat, encara que les hores se'm passen molt més ràpid en el Frontend, que és el que menys toco 😟.</p><p>Algun dia m'agradaria arribar a ser tot un mestre de JavaScript, però com canvia cada any és difícil seguir el ritme 😂</p><p>Sempre preparat per a nous reptes que em desafiïn i em facin trencar-me el cap.</p>",
+    "skills_content": "Les meves habilitats més interessants:",
+    "No soy precisamente alto.": "No soc precisament alt.",
+    "Siempre acechando.": "Sempre a l'aguait.",
+    "No se me da precisamente bien jugar a los bolos.": "No se'm dona precisament bé jugar a les bitlles, a les catalanes menys.",
+    "Siempre estoy escuchando música.": "Sempre estic escoltant música.",
+    "Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.": "Una vegada em vaig deixar el fre de mà posat i el meu cotxe va acabar enmig del bosc.",
+    "Operado de apendicitis.": "Operat d'apendicitis.",
+    "A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.": "A vegades vaig de públic a la TV, com els jubilats. Donen entrepà gratis.",
+    "Configurando un router.": "Configurant un router."
 }
