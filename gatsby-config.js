@@ -1,14 +1,15 @@
 const path = require('path')
-const config = require('./src/config');
+const config = require('./src/config')
 
 module.exports = {
   siteMetadata: {
-    title: 'new',
-    siteUrl: 'https://www.yourdomain.tld'
+    title: 'Toni PM',
+    description: 'Toni Peraira is a Full-stack developer specialized in cybersecurity and eager to continue evolving.',
+    siteUrl: 'https://tonipm.dev'
   },
   plugins: ['gatsby-plugin-netlify', 'gatsby-plugin-image', 'gatsby-plugin-styled-components', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Toni PM',
         short_name: 'Toni PM',
@@ -16,8 +17,8 @@ module.exports = {
         background_color: '#20202d',
         theme_color: '#9fef00',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png',
-      },
+        icon: 'src/images/icon.png'
+      }
     },
     {
       resolve: 'gatsby-plugin-root-import',
@@ -27,10 +28,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/locales`,
-        name: `locale`
+        path: path.join(__dirname, 'locales'),
+        name: 'locale'
       }
     }, {
       resolve: 'gatsby-source-filesystem',
@@ -52,24 +53,24 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/content/`,
-      },
+        path: path.join(__dirname, 'content')
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `experience`,
-        path: `${__dirname}/content/experience`,
-      },
+        name: 'content/experience',
+        path: path.join(__dirname, 'content/experience')
+      }
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: `locale`,
-        languages: [`en`, `es`, `ca`],
-        defaultLanguage: `en`,
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'es', 'ca'],
+        defaultLanguage: 'en',
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `http://localhost:8000/`,
+        siteUrl: 'http://localhost:8000/',
         i18nextOptions: {
           interpolation: {
             escapeValue: false // not needed for react as it escapes by default
@@ -91,7 +92,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
@@ -99,8 +100,8 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
-              rel: 'nofollow noopener noreferrer',
-            },
+              rel: 'nofollow noopener noreferrer'
+            }
           },
           {
             // https://www.gatsbyjs.org/packages/gatsby-remark-images
@@ -109,16 +110,16 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
-            },
+              tracedSVG: { color: config.colors.green }
+            }
           },
           {
             // https://www.gatsbyjs.org/packages/gatsby-remark-code-titles/
-            resolve: 'gatsby-remark-code-titles',
+            resolve: 'gatsby-remark-code-titles'
           }, // IMPORTANT: this must be ahead of other plugins that use code blocks
           {
             // https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
               // defaults to 'language-' (e.g. <pre class="language-js">).
@@ -160,25 +161,25 @@ module.exports = {
                   language: 'superscript',
                   extend: 'javascript',
                   definition: {
-                    superscript_types: /(SuperType)/,
+                    superscript_types: /(SuperType)/
                   },
                   insertBefore: {
                     function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
+                      superscript_keywords: /(superif|superelse)/
+                    }
+                  }
+                }
               ],
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
                 user: 'root',
                 host: 'localhost',
-                global: false,
-              },
-            },
-          },
-        ],
-      },
+                global: false
+              }
+            }
+          }
+        ]
+      }
     }]
 }

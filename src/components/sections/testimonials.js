@@ -1,11 +1,11 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { useStaticQuery, graphql } from 'gatsby';
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import styled from 'styled-components';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { useStaticQuery, graphql } from 'gatsby'
+import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 
 const StyledSection = styled.section`
   max-width: 900px;
@@ -121,10 +121,10 @@ const StyledSection = styled.section`
       height: 350px;
     }
   }
-`;
+`
 
 const Testimonials = () => {
-  const { language } = useI18next();
+  const { language } = useI18next()
   const data = useStaticQuery(graphql`
         query {
           testimonials: allMarkdownRemark(
@@ -154,17 +154,17 @@ const Testimonials = () => {
             }
           }
         }
-      `);
-  const testimonials = data.testimonials.edges.filter(edge => edge.node.frontmatter.lang === language);
+      `)
+  const testimonials = data.testimonials.edges.filter(edge => edge.node.frontmatter.lang === language)
 
   return (
-    <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+    <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledSection id='testimonials'>
         <div className='inner'>
           {testimonials && testimonials.map(({ node }, i) =>
             <Carousel
-              showArrows={true}
-              infiniteLoop={true}
+              showArrows
+              infiniteLoop
               showThumbs={false}
               showStatus={false}
               autoPlay={false}
@@ -172,12 +172,12 @@ const Testimonials = () => {
             >
               {
                 node.frontmatter.testimonials && node.frontmatter.testimonials.map((testimonial, i) => {
-                  const { name, title, quote, img } = testimonial;
+                  const { name, title, quote, img } = testimonial
                   const image = getImage(img)
                   return (
                     <div>
                       <GatsbyImage image={image} />
-                      <div className="myCarousel">
+                      <div className='myCarousel'>
                         <h3>{name}</h3>
                         <h4>{title}</h4>
                         <p>
@@ -186,7 +186,8 @@ const Testimonials = () => {
                       </div>
                     </div>
                   )
-                })}
+                })
+}
             </Carousel>
           )}
         </div>

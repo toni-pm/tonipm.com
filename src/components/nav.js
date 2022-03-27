@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Trans } from 'gatsby-plugin-react-i18next';
-import { Link, useI18next } from 'gatsby-plugin-react-i18next';
+import React, { useState, useEffect, useRef } from 'react'
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next'
+
 import { navItems, social } from 'config'
-import { KEY_CODES } from '../utils';
+import { KEY_CODES } from '../utils'
 import { Logo } from 'components'
 import { Icon } from 'components/icons'
 import styled from 'styled-components'
@@ -223,11 +223,11 @@ const HeaderLogo = styled.div`
 const NavbarLinks = ({ open }) => {
   return (
     <StyledLinks open={open}>
-      <HeaderLogo open={open} style={{ "margin-bottom": "20px" }}>
+      <HeaderLogo open={open} style={{ 'margin-bottom': '20px' }}>
         <Link to='/' className='default'>
           <Logo />
         </Link>
-        <LanguageLinks></LanguageLinks>
+        <LanguageLinks />
       </HeaderLogo>
       {
         navItems &&
@@ -235,14 +235,14 @@ const NavbarLinks = ({ open }) => {
           <NavItem className='default' key={i} to={url}><Trans>{name}</Trans></NavItem>
         ))
       }
-    </StyledLinks >
+    </StyledLinks>
   )
 }
 
 const LanguageLinks = () => {
-  const { languages, originalPath } = useI18next();
+  const { languages, originalPath } = useI18next()
   return (
-    <ul className="languages">
+    <ul className='languages'>
       {languages.map((lng) => (
         <li key={lng}>
           <Link to={originalPath} className='default' language={lng}>
@@ -272,57 +272,55 @@ const SocialLinks = ({ open }) => {
 const Nav = ({ isHome }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
-
   const onKeyDown = e => {
     switch (e.key) {
       case KEY_CODES.ESCAPE:
-        setNavbarOpen(false);
-        break;
+        setNavbarOpen(false)
+        break
       default:
-        return;
     }
-  };
+  }
 
   const onResize = e => {
     if (e.currentTarget.innerWidth > 768) {
-      setNavbarOpen(false);
+      setNavbarOpen(false)
     }
-  };
+  }
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    window.addEventListener('resize', onResize);
+    document.addEventListener('keydown', onKeyDown)
+    window.addEventListener('resize', onResize)
 
     return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
+      document.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
 
   return (
     <Navigation>
       {navbarOpen
         ? (
           <Navbox>
-            <div></div>
-            <NavbarLinks open={true} />
-            <SocialLinks open={true} />
+            <div />
+            <NavbarLinks open />
+            <SocialLinks open />
           </Navbox>
-        )
+          )
         : (
           <>
             <HeaderLogo>
               <Link to='/'>
                 <Logo />
               </Link>
-              <LanguageLinks></LanguageLinks>
+              <LanguageLinks />
             </HeaderLogo>
             <Navbox open>
               <NavbarLinks open={navbarOpen} />
             </Navbox>
             <SocialLinks open={navbarOpen} />
           </>
-        )}
+          )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

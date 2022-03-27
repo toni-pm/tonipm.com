@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import React, { useState, useEffect } from 'react'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import { skills } from 'config'
 import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
@@ -42,42 +42,41 @@ const StyledHero = styled.section`
 `
 
 const Hero = () => {
-
-  const texts = skills.map(skill => skill.tagCloud ? skill.name : null);
-  const [isMounted, setIsMounted] = useState(false);
+  const texts = skills.map(skill => skill.tagCloud ? skill.name : null)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     if (isMounted) {
-      return;
+      return
     }
     TagCloud('.tagcloud', texts, {
       radius: 250,
       maxSpeed: 'slow'
-    });
+    })
     setIsMounted(true)
-  }, []);
+  }, [])
 
-  const one = <h1><Trans>hero_title</Trans></h1>;
-  const two = <h2><Trans>hero_subtitle1</Trans></h2>;
-  const three = <h3><Trans>hero_subtitle2</Trans></h3>;
+  const one = <h1><Trans>hero_title</Trans></h1>
+  const two = <h2><Trans>hero_subtitle1</Trans></h2>
+  const three = <h3><Trans>hero_subtitle2</Trans></h3>
   const four = (
     <>
       <p>
         <Trans>hero_content</Trans>
       </p>
     </>
-  );
+  )
 
-  const items = [one, two, three, four];
+  const items = [one, two, three, four]
   return (
-    <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+    <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledHero id='hero'>
         <div>
           {items.map((item, i) => (
             <div>{item}</div>
           ))}
         </div>
-        <div className='tagcloud'></div>
+        <div className='tagcloud' />
       </StyledHero>
     </Fade>
   )

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import React, { useState, useEffect } from 'react'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import { skills } from 'config'
 import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const StyledSection = styled.section`
@@ -34,9 +34,8 @@ const Skill = styled.div`
 `
 
 const Skills = () => {
-
   return (
-    <Fade bottom duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+    <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledSection id='skills'>
         <h2><Trans>Skills</Trans></h2>
         <div className='inner'>
@@ -47,17 +46,17 @@ const Skills = () => {
             {skills && skills.map((skill, i) =>
               <li key={i}>
                 <span>{skill.name}</span>
-                <Skill level={skill.level}><div style={{ "width": `${skill.level}%` }}></div></Skill>
+                <Skill level={skill.level}><div style={{ width: `${skill.level}%` }} /></Skill>
               </li>)}
           </ul>
-              <StaticImage
-                className="img"
-                src="../../images/furbo.jpeg"
-                width={300}
-                quality={95}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt="Furbo"
-              />
+          <StaticImage
+            className='img'
+            src='../../images/furbo.jpeg'
+            width={300}
+            quality={95}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt='Furbo'
+          />
         </div>
       </StyledSection>
     </Fade>

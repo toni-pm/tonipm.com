@@ -1,8 +1,8 @@
-import React from "react"
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import React from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import styled from 'styled-components'
-import 'react-tabs/style/react-tabs.css';
+import 'react-tabs/style/react-tabs.css'
 
 const StyledTabs = styled.div`
     .react-tabs {
@@ -64,23 +64,22 @@ const StyledTabs = styled.div`
 `
 
 const CustomTabList = ({ items, title, panel }) => {
+  return (
+    <StyledTabs>
+      <Tabs>
+        <TabList>
+          {items && items.map((item, i) => <Tab key={i}><Trans>{title(item)}</Trans></Tab>)}
+        </TabList>
 
-    return (
-        <StyledTabs>
-            <Tabs>
-                <TabList>
-                    {items && items.map((item, i) => <Tab key={i}><Trans>{title(item)}</Trans></Tab>)}
-                </TabList>
-
-                {items && items.map((item, i) =>
-                    <TabPanel key={i}>
-                        {
+        {items && items.map((item, i) =>
+          <TabPanel key={i}>
+            {
                             panel(item)
                         }
-                    </TabPanel>)}
-            </Tabs>
-        </StyledTabs>
-    )
+          </TabPanel>)}
+      </Tabs>
+    </StyledTabs>
+  )
 }
 
 export default CustomTabList

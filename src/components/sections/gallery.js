@@ -1,12 +1,12 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { useStaticQuery, graphql } from 'gatsby';
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { useStaticQuery, graphql } from 'gatsby'
+import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import styled from 'styled-components'
 import TabsStyles from 'styles/TabsStyles'
 import Gallery from '@browniebroke/gatsby-image-gallery'
-import "react-image-gallery/styles/css/image-gallery.css";
+import 'react-image-gallery/styles/css/image-gallery.css'
 import { galleryCaptions } from 'config'
 
 const StyledSection = styled.section`
@@ -14,7 +14,7 @@ const StyledSection = styled.section`
 `
 
 const GallerySection = () => {
-  const { language } = useI18next();
+  const { language } = useI18next()
   const data = useStaticQuery(graphql`
         query {
             allFile(filter: {
@@ -37,14 +37,14 @@ const GallerySection = () => {
                 }
             }
         }
-    `);
+    `)
   const images = data.allFile.edges.map(node => {
     node.node.childImageSharp.caption = galleryCaptions[node.node.relativePath.split('/')[1]]
     return node.node.childImageSharp
   })
 
   return (
-    <Fade right duration={800} easing={'cubic-bezier(0.5, 0, 0, 1)'} distance={'50px'}>
+    <Fade right duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledSection id='gallery'>
         <h2><Trans>Gallery</Trans></h2>
 

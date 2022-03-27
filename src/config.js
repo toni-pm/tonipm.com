@@ -33,7 +33,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com'
+      url: 'https://www.linkedin.com/in/toni-peraira-775897235'
     },
     {
       name: 'HackTheBox',
@@ -180,14 +180,14 @@ module.exports = {
     }
   ],
   galleryCaptions: {
-    "bajito.jpg": 'No soy precisamente alto.',
-    "bigfoot.jpg": 'Siempre acechando.',
-    "bolos.jpg": 'No se me da precisamente bien jugar a los bolos.',
-    "cascos.jpg": 'Siempre estoy escuchando música.',
-    "coche.jpg": 'Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.',
-    "tibidabo.jpg": 'Operado de apendicitis.',
-    "tv.jpg": 'A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.',
-    "router.jpg": 'Configurando un router.'
+    'bajito.jpg': 'No soy precisamente alto.',
+    'bigfoot.jpg': 'Siempre acechando.',
+    'bolos.jpg': 'No se me da precisamente bien jugar a los bolos.',
+    'cascos.jpg': 'Siempre estoy escuchando música.',
+    'coche.jpg': 'Una vez me dejé el freno de mano puesto y mi coche acabo en mitad del bosque.',
+    'tibidabo.jpg': 'Operado de apendicitis.',
+    'tv.jpg': 'A veces voy de público a la TV, como los jubilados. Dan bocadillo gratis.',
+    'router.jpg': 'Configurando un router.'
   },
   colors: {
     green: '#64ffda',

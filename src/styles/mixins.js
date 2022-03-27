@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 const mixins = {
   fancyList: css`
@@ -17,7 +17,7 @@ const mixins = {
         color: var(--primary);
       }
     }
-  `,
-};
+  `
+}
 
-export default mixins;
+export default mixins

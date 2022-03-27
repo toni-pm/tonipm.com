@@ -1,6 +1,6 @@
 
 import styled from 'styled-components'
-import 'react-tabs/style/react-tabs.css';
+import 'react-tabs/style/react-tabs.css'
 import mixins from 'styles/mixins'
 
 const StyledTabs = styled.div`
