@@ -1,10 +1,8 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import styled from 'styled-components'
-import TabsStyles from 'styles/TabsStyles'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { galleryCaptions } from 'config'
@@ -14,7 +12,6 @@ const StyledSection = styled.section`
 `
 
 const GallerySection = () => {
-  const { language } = useI18next()
   const data = useStaticQuery(graphql`
         query {
             allFile(filter: {

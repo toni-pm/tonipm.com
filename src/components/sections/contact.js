@@ -69,15 +69,12 @@ const Contact = () => {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
     setError(false)
     setSuccess(false)
-    const formData = new FormData()
-    formData.append('name', name)
-    formData.append('mail', mail)
-    formData.append('subject', subject)
-    formData.append('message', message)
+    const myForm = document.getElementById('contact-form')
+    const formData = new FormData(myForm)
 
     fetch('/', {
       method: 'POST',
@@ -101,7 +98,7 @@ const Contact = () => {
         <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
-          <Form name='contact' onSubmit={handleSubmit} method='POST' data-netlify='true'>
+          <Form id='contact-form' name='contact' onSubmit={handleSubmit} method='POST' data-netlify='true'>
             <input type='hidden' name='form-name' value='contact' />
             <label for='lname'><Trans>Name</Trans></label>
             <input type='text' id='lname' name='name' required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
