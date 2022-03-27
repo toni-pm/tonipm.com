@@ -42,7 +42,7 @@ const Contact = () => {
 
         <div className='inner'>
           <Form name='contact' method='POST' data-netlify='true'>
-            <input type='hidden' name='form-name' value='Contact Form' />
+            <input type='hidden' name='form-name' value='contact' />
             <label for='lname'><Trans>Name</Trans></label>
             <input type='text' id='lname' name='name' required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
 
