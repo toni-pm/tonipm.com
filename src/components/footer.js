@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <div>© {new Date().getFullYear()} | Powered by Toni PM</div>
+      <div>© {new Date().getFullYear()} | Powered by <a className='default' href='https://tonipm.com'>Toni PM</a></div>
     </StyledFooter>
   )
 }

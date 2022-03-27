@@ -34,7 +34,7 @@ const StyledSection = styled.section`
   .carousel .control-dots {
     padding-left: 5px !important;
     outline: 0;
-    bottom: 3% !important;
+    margin: 0 0 5px 0;
   }
   
   .myCarousel h3 {
@@ -94,20 +94,6 @@ const StyledSection = styled.section`
     top: 50% !important;
   }
   
-  @media only screen and (max-width: 1150px) {
-  
-    .myCarousel {
-      height: 270px;
-    }
-  }
-  
-  @media only screen and (max-width: 900px) {
-  
-    .myCarousel {
-      height: 320px;
-    }
-  }
-  
   @media only screen and (max-width: 500px) {
     .carousel-root {
       width: 100% !important;
@@ -115,10 +101,6 @@ const StyledSection = styled.section`
   
     .carousel.carousel-slider .control-arrow {
       display: none !important;
-    }
-  
-    .myCarousel {
-      height: 350px;
     }
   }
 `
@@ -187,7 +169,7 @@ const Testimonials = () => {
                     </div>
                   )
                 })
-}
+              }
             </Carousel>
           )}
         </div>

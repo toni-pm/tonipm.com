@@ -4,7 +4,7 @@ date: '2016-01-01'
 title: 'Web Designer & Webmaster'
 company: 'Freelancer'
 range: '2018 - Present'
-url: 'https://www.tonipm.dev'
+url: 'https://tonipm.com'
 ---
 
 - Creation of web pages and Webmaster of own sites.

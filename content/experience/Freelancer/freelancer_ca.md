@@ -4,7 +4,7 @@ date: '2016-01-01'
 title: 'Web Designer & Webmaster'
 company: 'Freelancer'
 range: '2018 - Actualment'
-url: 'https://www.tonipm.dev'
+url: 'https://tonipm.com'
 ---
 
 - Creació de pàgines webs i Webmaster de llocs propis.

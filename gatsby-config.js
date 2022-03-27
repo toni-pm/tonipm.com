@@ -3,9 +3,9 @@ const config = require('./src/config')
 
 module.exports = {
   siteMetadata: {
-    title: 'Toni PM',
-    description: 'Toni Peraira is a Full-stack developer specialized in cybersecurity and eager to continue evolving.',
-    siteUrl: 'https://tonipm.dev'
+    title: 'Toni PM | Full-Stack developer',
+    description: 'Toni Peraira is a Full-Stack developer specialized in cybersecurity and eager to continue evolving.',
+    siteUrl: 'https://tonipm.com'
   },
   plugins: ['gatsby-plugin-netlify', 'gatsby-plugin-image', 'gatsby-plugin-styled-components', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
@@ -70,7 +70,7 @@ module.exports = {
         languages: ['en', 'es', 'ca'],
         defaultLanguage: 'en',
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: 'http://localhost:8000/',
+        siteUrl: 'https://tonipm.com',
         i18nextOptions: {
           interpolation: {
             escapeValue: false // not needed for react as it escapes by default
