@@ -63,7 +63,9 @@ const Contact = () => {
         <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
-          <Form onSubmit={sendMessage}>
+          <Form onSubmit={sendMessage} netlify-honeypot='bot-field' data-netlify='true'>
+            <input type='hidden' name='bot-field' />
+            <input type='hidden' name='contact-form' value='contact' />
             <label for='lname'><Trans>Name</Trans></label>
             <input type='text' id='lname' name='name' required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
 
