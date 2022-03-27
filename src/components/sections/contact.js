@@ -35,37 +35,13 @@ const Contact = () => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
-  const sendMessage = e => {
-    e.preventDefault()
-
-    const body = {
-      name,
-      mail,
-      subject,
-      message
-    }
-
-    if (!body.name) {
-      return false
-    }
-    if (!body.mail) {
-      return false
-    }
-    if (!body.message) {
-      return false
-    }
-    console.log('sendMessage', body)
-  }
-
   return (
     <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledSection id='contact'>
         <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
-          <Form onSubmit={sendMessage} netlify-honeypot='bot-field' data-netlify='true'>
-            <input type='hidden' name='bot-field' />
-            <input type='hidden' name='contact-form' value='contact' />
+          <Form onSubmit={sendMessage} name='contact' method='POST' netlify>
             <label for='lname'><Trans>Name</Trans></label>
             <input type='text' id='lname' name='name' required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
 
