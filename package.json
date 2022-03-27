@@ -57,7 +57,7 @@
   "devDependencies": {
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "standard": "^16.0.4",
-    "gatsby-plugin-root-import": "^2.0.8"
+    "gatsby-plugin-root-import": "^2.0.8",
+    "standard": "^16.0.4"
   }
 }

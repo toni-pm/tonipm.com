@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next'
-
 import { navItems, social } from 'config'
 import { KEY_CODES } from '../utils'
 import { Logo } from 'components'
@@ -49,7 +48,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     background-color: var(--nav-bg-color-mobile);
-    position: sticky;
+    position: ${props => (props.open ? 'fixed' : 'sticky')};
     justify-content: center;
     align-items: flex-start;
     height: 6vh;
@@ -220,57 +219,57 @@ const HeaderLogo = styled.div`
   }
 `
 
-const NavbarLinks = ({ open }) => {
-  return (
-    <StyledLinks open={open}>
-      <HeaderLogo open={open} style={{ 'margin-bottom': '20px' }}>
-        <Link to='/' className='default'>
-          <Logo />
-        </Link>
-        <LanguageLinks />
-      </HeaderLogo>
-      {
-        navItems &&
-        navItems.map(({ url, name }, i) => (
-          <NavItem className='default' key={i} to={url}><Trans>{name}</Trans></NavItem>
-        ))
-      }
-    </StyledLinks>
-  )
-}
-
-const LanguageLinks = () => {
-  const { languages, originalPath } = useI18next()
-  return (
-    <ul className='languages'>
-      {languages.map((lng) => (
-        <li key={lng}>
-          <Link to={originalPath} className='default' language={lng}>
-            {lng}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )
-}
-
-const SocialLinks = ({ open }) => {
-  return (
-    <StyledSocial open={open}>
-      {social &&
-        social.map(({ url, name }, i) => (
-          <li key={i}>
-            <a href={url} target='_blank' rel='noreferrer'>
-              <Icon name={name} />
-            </a>
-          </li>
-        ))}
-    </StyledSocial>
-  )
-}
-
 const Nav = ({ isHome }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+
+  const NavbarLinks = ({ open }) => {
+    return (
+      <StyledLinks open={open}>
+        <HeaderLogo open={open} style={{ 'margin-bottom': '20px' }}>
+          <Link to='/' className='default'>
+            <Logo />
+          </Link>
+          <LanguageLinks />
+        </HeaderLogo>
+        {
+          navItems &&
+          navItems.map(({ url, name }, i) => (
+            <NavItem className='default' key={i} to={url} onClick={() => setNavbarOpen(false)}><Trans>{name}</Trans></NavItem>
+          ))
+        }
+      </StyledLinks>
+    )
+  }
+
+  const LanguageLinks = () => {
+    const { languages, originalPath } = useI18next()
+    return (
+      <ul className='languages'>
+        {languages.map((lng) => (
+          <li key={lng}>
+            <Link to={originalPath} className='default' onClick={() => setNavbarOpen(false)} language={lng}>
+              {lng}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  const SocialLinks = ({ open }) => {
+    return (
+      <StyledSocial open={open}>
+        {social &&
+          social.map(({ url, name }, i) => (
+            <li key={i}>
+              <a href={url} target='_blank' rel='noreferrer'>
+                <Icon name={name} />
+              </a>
+            </li>
+          ))}
+      </StyledSocial>
+    )
+  }
 
   const onKeyDown = e => {
     switch (e.key) {
@@ -298,7 +297,7 @@ const Nav = ({ isHome }) => {
   }, [])
 
   return (
-    <Navigation>
+    <Navigation open>
       {navbarOpen
         ? (
           <Navbox>
@@ -306,7 +305,7 @@ const Nav = ({ isHome }) => {
             <NavbarLinks open />
             <SocialLinks open />
           </Navbox>
-          )
+        )
         : (
           <>
             <HeaderLogo>
@@ -320,7 +319,7 @@ const Nav = ({ isHome }) => {
             </Navbox>
             <SocialLinks open={navbarOpen} />
           </>
-          )}
+        )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
