@@ -41,7 +41,8 @@ const Contact = () => {
         <h2><Trans>Contact</Trans></h2>
 
         <div className='inner'>
-          <Form name='contact' method='POST' netlify>
+          <Form name='contact' method='POST' data-netlify='true'>
+            <input type='hidden' name='form-name' value='Contact Form' />
             <label for='lname'><Trans>Name</Trans></label>
             <input type='text' id='lname' name='name' required placeholder={t('Name')} onChange={(e) => setName(e.target.value)} />
 
@@ -54,7 +55,7 @@ const Contact = () => {
             <label for='txtmessage'><Trans>Message</Trans></label>
             <textarea id='txtmessage' name='message' required placeholder={t('Message')} onChange={(e) => setMessage(e.target.value)} />
 
-            <Tada><input className='btn' type='submit' value={t('Send message!')} /></Tada>
+            <Tada><button className='btn' type='submit'><Trans>Send message!</Trans></button></Tada>
           </Form>
         </div>
       </StyledSection>
