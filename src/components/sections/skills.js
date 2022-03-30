@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Trans } from 'gatsby-plugin-react-i18next'
 import { skills } from 'config'
-import TagCloud from 'TagCloud'
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'

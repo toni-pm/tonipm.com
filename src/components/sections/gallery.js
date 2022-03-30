@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import styled from 'styled-components'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
@@ -12,6 +12,7 @@ const StyledSection = styled.section`
 `
 
 const GallerySection = () => {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
         query {
             allFile(filter: {
@@ -36,7 +37,7 @@ const GallerySection = () => {
         }
     `)
   const images = data.allFile.edges.map(node => {
-    node.node.childImageSharp.caption = galleryCaptions[node.node.relativePath.split('/')[1]]
+    node.node.childImageSharp.caption = t(galleryCaptions[node.node.relativePath.split('/')[1]])
     return node.node.childImageSharp
   })
 

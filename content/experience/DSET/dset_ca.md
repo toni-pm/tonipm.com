@@ -1,7 +1,7 @@
 ---
 lang: ca
 date: '2016-03-01'
-title: 'Analista programador & Cap de projecte'
+title: 'Desenvolupador Full-Stack & Cap de projecte'
 company: 'DSET SOLUTIONS'
 range: 'April 2016 - Actualment'
 url: 'http://dset.solutions/'

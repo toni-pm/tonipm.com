@@ -1,7 +1,7 @@
 ---
 lang: en
 date: '2016-03-01'
-title: 'Programmer analyst & Project manager'
+title: 'Full-Stack Developer & Project manager'
 company: 'DSET SOLUTIONS'
 range: 'April 2016 - Present'
 url: 'http://dset.solutions/'
