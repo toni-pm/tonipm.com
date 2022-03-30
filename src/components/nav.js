@@ -29,9 +29,10 @@ const Navigation = styled.nav`
     padding: 0;
     text-align: center;
     display: flex;
+    font-size: var(--fz-md);
 
     li {
-      margin: 0 5px;
+      margin: 0 8px;
 
       a {
         color: var(--nav-color);

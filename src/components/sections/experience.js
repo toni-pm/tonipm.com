@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import styled from 'styled-components'
 import TabsStyles from 'styles/TabsStyles'
 import Gallery from '@browniebroke/gatsby-image-gallery'
@@ -50,24 +49,47 @@ const Experience = () => {
     `)
   const experienceData = data.experience.edges.filter(edge => edge.node.frontmatter.lang === language)
 
+  const selectTab = (btnTab, tabN) => {
+    const tabcontent = document.getElementsByClassName('tabcontent-experience')
+    for (let i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none'
+    }
+    const tablinks = document.getElementsByClassName('tablinks-experience')
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(' active', '')
+    }
+    const elTab = document.getElementById(`experience-${tabN}`)
+    if (elTab) {
+      elTab.style.display = 'block'
+    }
+    if (btnTab) {
+      btnTab.className += ' active'
+    }
+  }
+
+  useEffect(() => {
+    const btnTab = document.getElementById('btn-tab-experience-0')
+    selectTab(btnTab, 0)
+  }, [])
+
   return (
     <Fade right duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
       <StyledSection id='experience'>
         <h2><Trans>Experience</Trans></h2>
 
         <div className='inner'>
-          <TabsStyles>
-            <Tabs>
-              <TabList>
-                {experienceData &&
-                  experienceData.map(({ node }, i) => {
-                    const { company } = node.frontmatter
-                    return (
-                      <Tab key={i}>{company}</Tab>
-                    )
-                  })}
-              </TabList>
+          <TabsStyles className='tabs'>
+            <div class='tab'>
+              {experienceData &&
+                experienceData.map(({ node }, i) => {
+                  const { company } = node.frontmatter
+                  return (
+                    <button class='tablinks tablinks-experience' id={`btn-tab-experience-${i}`} key={i} onClick={e => selectTab(e.currentTarget, i)}>{company}</button>
+                  )
+                })}
+            </div>
 
+            <div className='tabcontents'>
               {experienceData &&
                 experienceData.map(({ node }, i) => {
                   const { frontmatter, html } = node
@@ -82,16 +104,16 @@ const Experience = () => {
                   }
 
                   return (
-                    <TabPanel key={i}>
+                    <div class='tabcontent tabcontent-experience' key={i} id={`experience-${i}`}>
                       <h3>{title}</h3>
                       <a className='company default' href={url} target='_blank' rel='noreferrer'> @ {company}</a>
                       <p className='range'>{range}</p>
                       <div dangerouslySetInnerHTML={{ __html: html }} />
-                      <Gallery images={images} />
-                    </TabPanel>
+                      <div className='gallery'><Gallery className='gallery' images={images} /></div>
+                    </div>
                   )
                 })}
-            </Tabs>
+            </div>
           </TabsStyles>
         </div>
       </StyledSection>

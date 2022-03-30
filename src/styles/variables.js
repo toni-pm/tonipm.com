@@ -6,6 +6,7 @@ const variables = css`
     --gray: #444;
     --gray-light: #666;
     --primary: #9fef00;
+    --primary-alpha: #9fef0033;
     --secondary: #334d00;
     --bg-color: #20202d;
     --bg-color-hover: #35354b;

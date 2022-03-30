@@ -143,6 +143,26 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  .gatsby-image-wrapper img {
+    cursor: pointer;
+  }
+
+  /* Scrollbar Styles */
+  html {
+    scrollbar-width: thin;
+  }
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border: 3px solid var(--bg-color);
+    border-radius: 10px;
+  }
+
   ${TransitionStyles};
 `
 

@@ -3,7 +3,7 @@ lang: en
 date: '2015-06-01'
 title: 'Parking controller'
 company: 'Hibiscus Town S.L.'
-range: 'Junio 2015 - Octubre 2015 & Junio 2016 - Octubre 2016'
+range: 'June 2015 - October 2015 & June 2016 - October 2016'
 gallery: [
     {img: './hibiscus_01.png', caption: 'Caught by Google Maps while I was working. Always at my job.'},
     {img: './hibiscus_02.png', caption: 'Picking up the chain from the parking, doing a good job.'},
