@@ -12,4 +12,4 @@ gallery: [
 ]
 ---
 
-- Controller of parking and blue zone of the town of Begur.
+- Controller of parking and blue zone of the Begur town hall.

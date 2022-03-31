@@ -7,8 +7,8 @@ range: 'April 2016 - Present'
 url: 'http://dset.solutions/'
 ---
 
-- Responsible for software projects.
+- Software project manager.
 - Analysis, planning, creation and management of projects and work groups.
-- Design of business solutions at the software level.
+- Design of business software solutions.
 - Management of the architecture of physical and cloud servers (AWS).
 - Creation of websites and mobile Apps.
