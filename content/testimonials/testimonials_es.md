@@ -6,7 +6,7 @@ testimonials: [
     {name: 'Furbo', title: 'Furbo', img: './furbo.jpeg', quote: 'Furbo.'},
     {name: 'Cintia', title: 'Mi señora', img: './cintia.png', quote: 'Este chico vale oro. Páguenle bien.'},
     {name: 'Ru', title: 'Gato', img: './ru.png', quote: 'Miau.'},
-    {name: 'Edi', title: 'Primo', img: './edi.png', quote: 'Me hizo pagar 2 euros por aparcar el cabrón.'},
+    {name: 'Edi', title: 'Primo', img: './edi.png', quote: 'Me hizo pagar 3€ para aparcarme en un parking de 2€ todo el día. ¡Tiene instinto de negocio el cabrón!'},
     {name: 'Tony', title: 'Amigo', img: './tony.png', quote: 'Toni no es comunista. Puede ser un mentiroso, un cerdo, un idiota, un comunista... ¡pero de actor porno no tiene nada!'},
 ]
 ---

@@ -6,7 +6,7 @@ testimonials: [
     {name: 'Furbo', title: 'Furbo', img: './furbo.jpeg', quote: 'Furbo.'},
     {name: 'Cintia', title: 'Mi señora', img: './cintia.png', quote: 'Gold boy. Pay him well.'},
     {name: 'Ru', title: 'Cat', img: './ru.png', quote: 'Miau.'},
-    {name: 'Edi', title: 'Primo', img: './edi.png', quote: 'He made me pay 2 euros to park the bastard.'},
+    {name: 'Edi', title: 'Primo', img: './edi.png', quote: 'He made me pay 3€ to park in a 2€ all day parking. The bastard has business instincts! '},
     {name: 'Tony', title: 'Amigo', img: './tony.png', quote: "Toni is not a communist. He may be a liar, a pig, an idiot, a communist... but he is NOT a porn star!"}
 ]
 ---
