@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
@@ -145,6 +145,7 @@ const Testimonials = () => {
         <div className='inner'>
           {testimonials && testimonials.map(({ node }, i) =>
             <Carousel
+              key={i}
               showArrows
               infiniteLoop
               showThumbs={false}
@@ -153,11 +154,11 @@ const Testimonials = () => {
               interval={6100}
             >
               {
-                node.frontmatter.testimonials && node.frontmatter.testimonials.map((testimonial, i) => {
+                node.frontmatter.testimonials && node.frontmatter.testimonials.map((testimonial, n) => {
                   const { name, title, quote, img } = testimonial
                   const image = getImage(img)
                   return (
-                    <div>
+                    <div key={n}>
                       <GatsbyImage image={image} />
                       <div className='myCarousel'>
                         <h3>{name}</h3>

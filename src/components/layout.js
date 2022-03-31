@@ -6,7 +6,7 @@ const StyledLayout = styled.div`
   padding: 0rem 3rem 0rem 13rem;
 
   @media (max-width: 768px) {
-    padding: 0 2rem 3rem 2rem;
+    padding: 0 2rem 0rem 2rem;
   }
 `
 

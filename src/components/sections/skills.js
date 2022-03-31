@@ -32,6 +32,16 @@ const Skill = styled.div`
   }
 `
 
+const StyledImage = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    cursor: default;
+  }
+`
+
 const Skills = () => {
   return (
     <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
@@ -48,14 +58,16 @@ const Skills = () => {
                 <Skill level={skill.level}><div style={{ width: `${skill.level}%` }} /></Skill>
               </li>)}
           </ul>
-          <StaticImage
-            className='img'
-            src='../../images/furbo.jpeg'
-            width={300}
-            quality={95}
-            formats={['AUTO', 'WEBP', 'AVIF']}
-            alt='Furbo'
-          />
+          <StyledImage>
+            <StaticImage
+              className='img'
+              src='../../images/furbo.jpeg'
+              width={300}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt='Furbo'
+            />
+          </StyledImage>
         </div>
       </StyledSection>
     </Fade>

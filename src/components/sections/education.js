@@ -32,9 +32,8 @@ const Education = () => {
                   img {
                     childImageSharp {
                       thumb: gatsbyImageData(
-                        width: 270
-                        height: 200
-                        placeholder: BLURRED
+                        width: 500
+                        height: 300
                       )
                       full: gatsbyImageData(layout: FULL_WIDTH)
                     }

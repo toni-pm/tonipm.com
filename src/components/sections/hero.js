@@ -73,7 +73,7 @@ const Hero = () => {
       <StyledHero id='hero'>
         <div>
           {items.map((item, i) => (
-            <div>{item}</div>
+            <div key={i}>{item}</div>
           ))}
         </div>
         <div className='tagcloud' />

@@ -66,6 +66,10 @@ const StyledTabs = styled.div`
 
     .gallery {
         padding: 0px 12px;
+
+        div {
+            justify-content: center;
+        }
     }
 
     
@@ -79,7 +83,7 @@ const StyledTabs = styled.div`
             width: 100%;
         
             button {
-                min-width: 160px;
+                min-width: 175px;
                 border-left: none;
                 border-bottom: 3px solid var(--primary-alpha);
                 

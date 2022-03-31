@@ -306,7 +306,7 @@ const Nav = ({ isHome }) => {
             <NavbarLinks open />
             <SocialLinks open />
           </Navbox>
-        )
+          )
         : (
           <>
             <HeaderLogo>
@@ -320,7 +320,7 @@ const Nav = ({ isHome }) => {
             </Navbox>
             <SocialLinks open={navbarOpen} />
           </>
-        )}
+          )}
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

@@ -1,7 +1,7 @@
 ---
 lang: ca
 date: '2012-01-01'
-name: 'Batxillerato Tecnològic'
+name: 'Batxillerat Tecnològic'
 location: 'IES Frederic Martí Carreras'
 range: '2012'
 gallery: [
