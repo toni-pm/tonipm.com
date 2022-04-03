@@ -1032,7 +1032,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.5", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.2", "@babel/runtime@^7.7.6":
+"@babel/runtime@^7.14.5", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.2":
   version "7.17.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.8.tgz#3e56e4aff81befa55ac3ac6a0967349fd1c5bca2"
   integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
@@ -1719,6 +1719,16 @@
     native-url "^0.2.6"
     schema-utils "^2.6.5"
     source-map "^0.7.3"
+
+"@reach/router@^1.3.4":
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.3.4.tgz#d2574b19370a70c80480ed91f3da840136d10f8c"
+  integrity sha512-+mtn9wjlB9NN2CNnnC/BRYtwdKBfSyyasPYraNAyvaV1occr/5NnB4CVzjEZipNHwYebQwcndGUmpFzxAUoqSA==
+  dependencies:
+    create-react-context "0.3.0"
+    invariant "^2.2.3"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@sideway/address@^4.1.3":
   version "4.1.3"
@@ -3331,11 +3341,6 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
-clsx@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
-  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
-
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/coa/-/coa-2.0.2.tgz"
@@ -3649,6 +3654,14 @@ create-gatsby@^2.10.2:
   integrity sha512-OmuFey3Eoaek20m8Br/iIqEr76AUrl/ThCn7TBYJ6RvWVKezKV5UksQlFpdQgPK8kO9LogjkmiyA0k94VC3nXg==
   dependencies:
     "@babel/runtime" "^7.15.4"
+
+create-react-context@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.3.0.tgz#546dede9dc422def0d3fc2fe03afe0bc0f4f7d8c"
+  integrity sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==
+  dependencies:
+    gud "^1.0.0"
+    warning "^4.0.3"
 
 create-require@^1.1.0:
   version "1.1.1"
@@ -5575,6 +5588,13 @@ gatsby-plugin-page-creator@^4.7.0:
     globby "^11.0.4"
     lodash "^4.17.21"
 
+gatsby-plugin-react-helmet@^5.11.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.11.0.tgz#cf20639260fd1fd6180a3cfe1c64da2636ea9655"
+  integrity sha512-4ouGsfCCjbXtuz9/IR8YU2PfcHQ/peSHHr5UwIu6X/cJ2A8ykZHFMewQ4ve8dfHSBmNKDBuoFe6D0Y8Q4MDI8w==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 gatsby-plugin-react-i18next@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-i18next/-/gatsby-plugin-react-i18next-1.2.2.tgz#089838de9f28920b89a0e08bc8262d1b4bdec9b5"
@@ -6318,6 +6338,11 @@ gray-matter@^4.0.2, gray-matter@^4.0.3:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gud@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
+  integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
+
 gzip-size@5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/gzip-size/-/gzip-size-5.1.1.tgz"
@@ -6532,13 +6557,6 @@ header-case@^1.0.0:
   dependencies:
     no-case "^2.2.0"
     upper-case "^1.1.3"
-
-history@^5.2.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
-  integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
-  dependencies:
-    "@babel/runtime" "^7.7.6"
 
 hoist-non-react-statics@^3.0.0:
   version "3.3.2"
@@ -9662,7 +9680,7 @@ prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -9947,40 +9965,10 @@ react-reveal@^1.2.2:
   dependencies:
     prop-types "^15.5.10"
 
-react-router-dom@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.2.2.tgz#f1a2c88365593c76b9612ae80154a13fcb72e442"
-  integrity sha512-AtYEsAST7bDD4dLSQHDnk/qxWLJdad5t1HFa1qJyUrCeGgEuCSw0VB/27ARbF9Fi/W5598ujvJOm3ujUCVzuYQ==
-  dependencies:
-    history "^5.2.0"
-    react-router "6.2.2"
-
-react-router-hash-link@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-2.4.3.tgz#570824d53d6c35ce94d73a46c8e98673a127bf08"
-  integrity sha512-NU7GWc265m92xh/aYD79Vr1W+zAIXDWp3L2YZOYP4rCqPnJ6LI6vh3+rKgkidtYijozHclaEQTAHaAaMWPVI4A==
-  dependencies:
-    prop-types "^15.7.2"
-
-react-router@6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.2.2.tgz#495e683a0c04461eeb3d705fe445d6cf42f0c249"
-  integrity sha512-/MbxyLzd7Q7amp4gDOGaYvXwhEojkJD5BtExkuKmj39VEE0m3l/zipf6h2WIB2jyAO0lI6NGETh4RDcktRm4AQ==
-  dependencies:
-    history "^5.2.0"
-
 react-side-effect@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
-
-react-tabs@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/react-tabs/-/react-tabs-4.0.1.tgz#d833438629cfab9f156bf5bec5a653ce21d4348e"
-  integrity sha512-Xldj56RHhaRd37iftOwnnjsFEemHY2R07EQ9x5EqOApGauxhdLi7fc/sEKJrtFANHnasNXzSnCWdJ0ulEamMoQ==
-  dependencies:
-    clsx "^1.1.0"
-    prop-types "^15.5.0"
 
 react@^17.0.1:
   version "17.0.2"

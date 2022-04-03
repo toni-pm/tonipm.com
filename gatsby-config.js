@@ -3,7 +3,7 @@ const config = require('./src/config')
 
 module.exports = {
   siteMetadata: {
-    title: 'Toni PM | Full-Stack developer',
+    title: 'Toni PM | Full-Stack Developer',
     description: 'Toni Peraira is a Full-Stack developer specialized in cybersecurity and eager to continue evolving.',
     siteUrl: 'https://tonipm.com'
   },
