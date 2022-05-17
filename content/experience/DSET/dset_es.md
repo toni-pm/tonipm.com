@@ -1,7 +1,7 @@
 ---
 lang: es
 date: '2016-03-01'
-title: 'Desarrollador Full-Stack & Jefe de proyecto'
+title: 'Full-Stack Developer & Project Manager'
 company: 'DSET SOLUTIONS'
 range: 'Abril 2016 - Actualmente'
 url: 'http://dset.solutions/'
