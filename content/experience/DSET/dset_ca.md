@@ -1,10 +1,10 @@
 ---
 lang: ca
-date: '2016-03-01'
-title: 'Desenvolupador Full-Stack & Project Manager'
-company: 'DSET SOLUTIONS'
-range: 'Abril 2016 - Actualment'
-url: 'http://dset.solutions/'
+date: "2016-03-01"
+title: "Desenvolupador Full Stack & Project Manager"
+company: "DSET SOLUTIONS"
+range: "Abril 2016 - Juny 2022"
+url: "http://dset.solutions/"
 ---
 
 - Responsable de projectes de software.
