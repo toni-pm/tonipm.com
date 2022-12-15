@@ -29,7 +29,7 @@ module.exports = {
   social: [
     {
       name: 'GitHub',
-      url: 'https://github.com/toni-pm'
+      url: 'https://github.com/tonipm'
     },
     {
       name: 'Linkedin',
