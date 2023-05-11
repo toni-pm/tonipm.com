@@ -85,10 +85,10 @@ const StyledPic = styled.div`
 const About = () => {
   const { language } = useI18next()
   const resumeLink = language === 'es'
-    ? '/Toni_Peraira_CV_es.pdf'
+    ? '/CV/Toni_Peraira_CV_es.pdf'
     : language === 'ca'
-      ? '/Toni_Peraira_CV_ca.pdf'
-      : '/Toni_Peraira_CV_en.pdf'
+      ? '/CV/Toni_Peraira_CV_ca.pdf'
+      : '/CV/Toni_Peraira_CV_en.pdf'
 
   return (
     <Fade bottom duration={800} easing='cubic-bezier(0.5, 0, 0, 1)' distance='50px'>
