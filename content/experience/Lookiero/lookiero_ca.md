@@ -7,4 +7,5 @@ range: "Juny 2022 - Actualment"
 url: "https://lookiero.com/"
 ---
 
-- Team Payments
+- Growth & Finance Team
+- EDA, MSA, DDD, Hexagonal, CQRS, CI/CD, RabbitMQ, Jenkins, Kibana, Graphana, test (unit/mutation/e2e/contract/acceptance), Java 17, Micro-frontend architecture, React Native, Typescript and i molt més 😄
