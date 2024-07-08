@@ -13,3 +13,4 @@ range: '2023'
   - [📄](/other_courses/codely/git-introduccion-y-trabajo-en-equipo.pdf) Git: Introduction and teamwork
   - [📄](/other_courses/codely/testing-introduccion-y-buenas-practicas.pdf) Testing: Introduction and good practices
   - [📄](/other_courses/codely/comunicacion-entre-microservicios-event-driven-architecture.pdf) Communication between microservices: Event-Driven Architecture
+  - [📄](/other_courses/codely/codely-domain-driven-design-ddd-aplicado.pdf) Domain-Driven Design: Applied DDD
